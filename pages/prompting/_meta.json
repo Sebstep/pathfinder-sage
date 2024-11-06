@@ -1,0 +1,11 @@
+{
+  "best-practices": "Best Practices",
+  "assign-job": "Assign the Model a Job",
+  "instruct": "Instruct the Model",
+  "provide-context": "Provide Context & Framing",
+  "use-delimiters": "Use Delimiters and Special Tokens",
+  "specify-output": "Specify the Output Format & Style",
+  "time-to-think": "Give the model time to think",
+  "give-examples": "Give Examples",
+  "further-resources": "Further Resources"
+}
