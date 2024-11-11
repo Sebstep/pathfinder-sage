@@ -1,5 +1,4 @@
 export default {
-  best_practices: 'Best practices',
   assign_job: 'Assign the model a job',
   instruct: 'Instruct the model throughout the prompt',
   provide_context: 'Provide context & framing',
