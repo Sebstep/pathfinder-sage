@@ -1,0 +1,20 @@
+# Instruct the Model Throughout the Prompt
+
+When writing instructions, provide adequate context before describing the task you want the model to perform.
+
+```md copy
+Read the following excerpt from an essay:
+
+“Despite the popular belief, there's no solid evidence supporting the idea that video games lead to violent behavior.
+Research on the topic is often contradictory and inconclusive. Some studies found a correlation, but correlation doesn't imply causation.
+So, it's premature to blame video games for violence in society.”
+
+Provide feedback on this excerpt based on the following criteria: grammar, clarity, coherence, argument quality, and use of evidence.
+Provide a score from 1-10 for each attribute, along with reasoning for your score.
+```
+
+Note the following points from the example above:
+
+- **Instruct throughout the entire prompt**, e.g., by writing `Read the following excerpt...` instead of `This is an excerpt...`
+- **Clearly specify the requirements**, e.g., by providing `...the following criteria: grammar, `
+- **Clearly specify the desired output format**, e.g., by asking the model to `Provide a score from 1-10 for each attribute, along with reasoning for your score.`

@@ -1,6 +1,5 @@
 export default {
-    index: 'My Homepage',
-    test: 'Test Page',
-    // contact: 'Contact Us',
-    // about: 'About Us'
+    index: 'Introduction',
+    genai: 'Basics of Generative AI',
+    prompting: 'How to Prompt',
 }
