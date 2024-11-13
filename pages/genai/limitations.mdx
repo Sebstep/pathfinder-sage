@@ -4,6 +4,10 @@
 - **Biased training data**: Language models have been trained on a variety of sources that may contain biases and lead to biased answers.
 - **Hallucinations**: Language models may confidently present false information, especially for queries beyond its knowledge boundary.
 
+<mark>Consider that everything you put into a prompt will be sent to the operator of the language model.</mark> Avoid putting personally identifiable or confidential information into your prompts. One way to ensure full privacy is to run a model locally on your own computer. However, this may require basic programming skills and, for the best performing models, powerful hardware. 
+
+As a rule of thumb, we recommend that you put nothing into a prompt for an online chatbot that you would not post publicly or on your personal social media.
+
 ## When can language models be used?
 
 - **What happens if the output is wrong?** If the use case requires absolute accuracy, as in diagnostics, an LLM may not be the safest choice.

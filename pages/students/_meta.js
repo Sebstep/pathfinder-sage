@@ -1,3 +1,3 @@
 export default {
-  exams: 'Exams & learning assessment',
+  exams: 'Exams & how to assess learning',
 }
