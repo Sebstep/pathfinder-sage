@@ -1,3 +1,4 @@
+import '../pages/globals.css'
 import '../styles/global.css'
 import '../styles/chat.css'
 
