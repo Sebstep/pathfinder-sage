@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+mark {
+    background-color: #FFE6AD;
+    color: #000;
+}
