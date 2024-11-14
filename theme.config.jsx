@@ -1,3 +1,5 @@
+import Footer from '/components/footer'
+
 export default {
     logo: <span>Pathfinder SAGE</span>,
     project: {
@@ -18,9 +20,10 @@ export default {
     },
     footer: {
         content: (
-                <span>
-                    <strong>Pathfinder SAGE</strong>
-                </span>
+                // <span>
+                //     <strong>Pathfinder SAGE</strong>
+                // </span>
+                <Footer />
         )
     },
     head: (
