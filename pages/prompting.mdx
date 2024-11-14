@@ -1,3 +1,5 @@
+import Chat from '../components/chat'
+
 # Prompt Engineering
 
 ## What is prompting and why does it matter?
@@ -21,40 +23,25 @@
 
 **Answer a question**
 
-<div class="chat-container">
-  <div class="message user">
-    <div class="message-avatar">🙋</div>
-    <div class="message-bubble">What is the capital of France?</div>
-  </div>
-  <div class="message assistant">
-    <div class="message-avatar">🤖</div>
-    <div class="message-bubble">The capital of France is Paris.</div>
-  </div>
-</div>
+
+<Chat 
+  userMessage='What is the capital of France?' 
+  assistantMessage='The capital of France is Paris.' 
+/>
 
 ---
 
 **Solve a Logical Problem**
 
-<div class="chat-container">
-  <div class="message user">
-    <div class="message-avatar">🙋</div>
-    <div class="message-bubble">
-      Solve this logical puzzle: If all bloops are razzles and all razzles are
-      fizzles, are all bloops fizzles?
-    </div>
-  </div>
-  <div class="message assistant">
-    <div class="message-avatar">🤖</div>
-    <div class="message-bubble">
-      Yes, all bloops are fizzles. This is a classic example of the transitive
+<Chat 
+  userMessage='Solve this logical puzzle: If all bloops are razzles and all razzles are
+      fizzles, are all bloops fizzles?' 
+  assistantMessage='Yes, all bloops are fizzles. This is a classic example of the transitive
       property in logic. Here’s how it works: We know that all bloops are
       razzles. We also know that all razzles are fizzles. If every bloop is a
       razzle and every razzle is a fizzle, then by transitivity, every bloop
-      must also be a fizzle.
-    </div>
-  </div>
-</div>
+      must also be a fizzle.' 
+/>
 
 ---
 

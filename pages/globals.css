@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 mark {
-    background-color: #FFE6AD;
-    color: #000;
+    background-color: #ffe6ad;
 }
