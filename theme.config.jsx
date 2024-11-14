@@ -13,7 +13,7 @@ export default {
     },
     sidebar: {
         defaultMenuCollapseLevel: 1,
-        autoCollapse: true,
+        autoCollapse: false,
         toggleButton: false,
     },
     footer: {
