@@ -9,20 +9,17 @@ export default {
     editLink: {
         component: null,
     },
-    feedback: {
-        content: "Questions? Send feedback", // content of the feedback button
-        useLink: () => "mailto:sebastian.moder@uni.li" // Custom link
-    },
     sidebar: {
         defaultMenuCollapseLevel: 1,
         autoCollapse: false,
         toggleButton: false,
     },
+    feedback: {
+        content: "Questions? Send feedback", // content of the feedback button
+        useLink: () => "mailto:sebastian.moder@uni.li" // Custom link
+    },
     footer: {
         content: (
-                // <span>
-                //     <strong>Pathfinder SAGE</strong>
-                // </span>
                 <Footer />
         )
     },
@@ -39,6 +36,7 @@ export default {
                     `,
                 }}
             />
+            <script src="https://kit.fontawesome.com/6a5bc08ebc.js" crossorigin="anonymous"></script>
         </>
     )
     // ... other theme options
