@@ -1,37 +1,38 @@
 import { Steps } from 'nextra/components'
+import Link from 'next/link'
 
 # When can language models be used?
 
-If you want to delegate a task to an LLM, answer the following 4 questions.
+Generative AI, such as language models, can be powerful tools in education, but their use requires thoughtful consideration. Before delegating a task to an AI, ask yourself these four critical questions.
 
 <Steps>
 ## What happens if the output is wrong?
- 
-If the use case requires absolute accuracy, as in diagnostics, an LLM may not be the safest choice.
+
+If your task requires absolute accuracy—such as diagnosing an issue, grading exams, or publishing official materials—AI may not be the safest choice. Language models can produce plausible-sounding but incorrect or misleading answers, often referred to as *hallucinations* (see [Limitations](/genai/limitations)).
+
+When accuracy is critical, <mark>use AI as part of an *augmented decision-making process* rather than the sole source of information</mark>. For example, ask AI to generate a draft that you can refine and verify.
 
 {/* TODO: expand upon algorithmic(-augmented) decision-making */}
 
 ## How will you check the accuracy of the answer?
 
-The AI is your assistant. <mark>Only use an LLM for tasks that you could solve yourself given enough time.</mark>
+AI is your assistant, not a replacement. <mark>Only use AI for tasks you could solve independently, given enough time</mark>. If you're unfamiliar with the topic, the AI's errors may go unnoticed, potentially misleading your students.
 
 ## What data are you entering?
 
-For sensitive data (e.g. personal information or source code), you may need to obtain the necessary consent.
+Generative AI models are hosted by operators, meaning any data you provide is sent to their servers. Avoid inputting sensitive data such as personal information, student grades, or proprietary materials (unless you have obtained informed consent). 
 
-Consider that **everything you put into a prompt will be sent to the operator of the language model**. Avoid putting personally identifiable or confidential information into your prompts. As a rule of thumb, we recommend that you <mark>put nothing into a prompt that you would not post publicly on your personal social media</mark>.
+As a rule of thumb, we recommend that you <mark>put nothing into a prompt that you would not post publicly on your personal social media</mark>. 
 
-One way to ensure full privacy is to run a model locally on your own computer. However, this may require basic programming skills and, for the best performing models, powerful hardware.
-
-{/* TODO: Don't input students personal data. */}
+If privacy is critical, explore running AI models locally on your computer. Open-source models such as [LLaMA <i className="fa-solid fa-arrow-up-right-from-square"></i>](https://www.llama.com/) can offer privacy, but they require basic programming knowledge and adequate hardware.
 
 ## Do you require ownership of the answer?
 
-In general, <mark>users can claim ownership of the answers</mark> as long as the terms of use and applicable laws are complied with. However, this is a field of ongoing legal debate. If the output is to be used commercially (e.g. music, literature), inadvertent infringements of existing copyrights are possible. 
+Generative <mark>AI outputs can usually be claimed as your own</mark>, provided you comply with the model's terms of use and applicable laws. <mark-red>However, there are nuances to consider</mark-red>, particularly if the output is for commercial purposes or resembles existing copyrighted material.
 
-- Non-unique responses cannot be claimed as they could also be generated for other users.
-- When an output is provided directly to users (i.e., without a human in the loop), it must be clear to users that the answers do not originate from a human being.
-- Language models must not be used for legal infringements (e.g., copyright infringements). If content is similar to copyrighted material, this could lead to claims. For example: If we ask a language model to write a song in the style of an artist, it could be legally unclear who owns the result - the user, the artist or the model developer. 
+- Non-unique responses may not qualify as intellectual property as they could also be generated for other users.
+- When an output is provided directly to users (i.e., without a human in the loop), it must be clear to users that the answers do not originate from a human being. 
+- Language models must not be used for legal infringements (e.g., copyright infringements). Asking AI to create something "in the style of [Author/Artist X]" could lead to outputs that resemble copyrighted work. In this case, it could be legally unclear who owns the result - the user, the artist or the model developer. 
 </Steps>
 
 
