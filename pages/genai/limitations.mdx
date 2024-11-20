@@ -1,5 +1,35 @@
 # Limitations of language models
 
-- **Knowledge limit**: Language models were trained with data up to a certain date. Current information must be passed in the prompt.
-- **Biased training data**: Language models have been trained on a variety of sources that may contain biases and lead to biased answers.
-- **Hallucinations**: Language models may confidently present false information, especially for queries beyond its knowledge boundary.
+While generative AI tools like language models can be powerful and versatile, they have significant limitations that users must understand to use them effectively. Below are key constraints, with detailed explanations and examples.
+
+## Knowledge limit
+
+Language models are trained on datasets containing information up to a specific cut-off date. This means they lack awareness of events, discoveries, or developments that occurred after that date.
+
+- **Good Fit**: Asking about the historical significance of the Renaissance or the basics of quantum mechanics. These topics are well within the training data.
+- **Limitation**: Asking for insights on the latest research paper published this month or for predictions about ongoing political events. The model won’t have this information unless you include it in the prompt.
+
+<mark>For tasks requiring up-to-date information, you must provide the latest context within your query</mark> (e.g., current events, recent technology updates, or new legal policies). The model cannot spontaneously update itself with new knowledge.
+
+## Biased training data
+
+Language models are trained on vast datasets sourced from the internet, books, and other materials. These datasets inevitably reflect the biases present in their sources. As a result, <mark>the model's outputs can unintentionally reinforce stereotypes</mark>, cultural biases, or inaccuracies.
+
+**Examples**
+
+- **Gender bias**: Default assumptions about roles, e.g., associating “nurse” with women or “engineer” with men.
+- **Cultural bias**: Overrepresentation of certain cultural perspectives while neglecting others.
+- **Political bias**: Responses that reflect the political leanings of the data sources.
+
+AI can inadvertently perpetuate harm when biased outputs are used uncritically. It's essential for users to review and contextualize the responses, especially in sensitive or high-stakes scenarios.
+
+## Hallucinations
+
+Language models may confidently present false information, especially for queries beyond their knowledge boundary. This phenomenon, known as hallucination, occurs when the model generates plausible-sounding but incorrect or misleading answers.
+
+- **Example**: If you ask a language model about the health benefits of a fictional fruit, it may provide a detailed response based on its general knowledge of fruits, even though the fruit doesn’t exist.
+- **Mitigation**: When using language models, be cautious with answers that seem too specific or detailed, especially in niche or fictional contexts. Cross-check the information with reliable sources to verify its accuracy.
+
+You should always <mark>critically evaluate the outputs</mark>, especially when the AI is used for research, teaching, or publishing. If the answer seems implausible or too specific, it’s wise to verify it independently.
+
+To mitigate hallucinations, you can provide additional context or constraints in your prompt to guide the model towards more accurate responses. Furthermore, you can use techniques like [chain-of-thought prompting](/prompting/chain_of_thought_prompting) to encourage the AI to explain its reasoning step-by-step.
