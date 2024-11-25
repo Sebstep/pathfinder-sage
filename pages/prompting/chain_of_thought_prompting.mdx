@@ -2,19 +2,56 @@
 
 In chain-of-thought prompting, you <mark>encourage the AI to "show its work" as it arrives at a conclusion</mark>. Rather than jumping straight to an answer, the model follows a series of logical steps or considerations, as if it’s walking you through its thought process.
 
-Chain-of-thought prompting is a technique that encourages the AI to think through a problem step-by-step, resulting in <mark>responses that are more thorough, logical, and coherent</mark>. This method is particularly useful for complex tasks, like solving multi-step problems or analyzing nuanced topics, where a structured approach is essential.
+Chain-of-thought prompting results in <mark>responses that are more thorough, logical, and coherent</mark>. This method is particularly useful for complex tasks, like solving multi-step problems or analyzing nuanced topics, where a structured approach is essential.
 
 ## Benefits of Chain-of-Thought Prompting
 
 - **Enhanced Clarity**: Breaking down complex questions into smaller steps allows the model to consider each part carefully, reducing the chance of misunderstanding or glossing over details.
 - **Improved Accuracy**: With a step-by-step approach, the AI can "double-check" each stage, which often results in more reliable outcomes for calculations or logic-heavy tasks.
-- **Transparency**: Following the model’s reasoning can be as valuable as the final answer. Chain-of-thought responses make the process visible and understandable.
+- **Transparency**: Following the model’s reasoning can be as valuable as the final answer. Chain-of-thought responses make the process visible and understandable to reduce [hallucinations](/genai/limitations#hallucinations).
 
 ## How to Create a Chain-of-Thought Prompt?
 
-1. **Ask for Step-by-Step Reasoning**: Start by explicitly requesting that the model explain its thinking, e.g., `Walk through each step` or `Explain your reasoning in stages.`
+1. **Ask for Step-by-Step Reasoning**: Start by explicitly requesting that the model explain its thinking, e.g., `Walk through each step` or `Explain your reasoning step-by-step.`
 2. **Break Down Complex Tasks**: When dealing with multi-layered problems, specify individual components the model should address, like analyzing cause and effect, listing pros and cons, or calculating intermediate values.
 3. **Encourage Reflective Thinking**: If appropriate, ask the model to evaluate each stage before moving to the next, encouraging it to consider multiple perspectives or possibilities.
 
 {/* TODO: Examples for CoT-Prompts */}
 {/* TODO: tell it not to make assumptions and ask questions about anything it’s not sure about */}
+
+---
+
+**Example without Chain-of-Thought prompt**
+
+<div class="chat-container">
+  <div class="message user">
+    <div class="message-avatar">🙋</div>
+    <div class="message-bubble">How many apples does Sarah have left if she starts with 12 apples and gives 7 to her friend?</div>
+  </div>
+  <div class="message assistant">
+    <div class="message-avatar">🤖</div>
+    <div class="message-bubble">If Sarah starts with 12 apples and gives 7 apples to her friend, she has 5 apples left. 🍎</div>
+  </div>
+</div>
+
+---
+
+**Example with Chain-of-Thought prompt**
+
+<div class="chat-container">
+    <div class="message user">
+        <div class="message-avatar">🙋</div>
+        <div class="message-bubble">How many apples does Sarah have left if she starts with 12 apples and gives 7 to her friend? Explain your reasoning step-by-step.</div>
+    </div>
+    <div class="message assistant">
+        <div class="message-avatar">🤖</div>
+        <div class="message-bubble">
+            To determine how many apples Sarah has left, we follow these steps:
+            1. **Start with the total number of apples Sarah has initially**: Sarah starts with 12 apples.
+            2. **Subtract the number of apples Sarah gives away to her friend**: Sarah gives 7 apples to her friend. To find out how many apples remain, subtract 7 from 12.
+            3. **State the result**: After giving away 7 apples, Sarah has 5 apples left.
+
+            **Final Answer: Sarah has 5 apples left.**
+        </div>
+    </div>
+</div>
