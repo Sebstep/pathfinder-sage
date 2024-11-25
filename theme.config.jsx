@@ -15,13 +15,18 @@ export default {
         toggleButton: false,
     },
     feedback: {
-        content: "Questions? Send feedback", // content of the feedback button
-        useLink: () => "mailto:sebastian.moder@uni.li" // Custom link
+        content: null // "Questions? Send feedback", // content of the feedback button
+        // useLink: () => "mailto:sebastian.moder@uni.li" // Custom link
     },
     footer: {
         content: (
                 <Footer />
         )
+    },
+    banner: {
+        dismissible: false,
+        key: "indevelopment",
+        content: "🚧 This site is currently under heavy development. Please be aware that its content is far from final and may change at any time. 🚧",
     },
     head: (
         <>
