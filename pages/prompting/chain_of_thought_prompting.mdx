@@ -1,3 +1,5 @@
+import Chat from '../../components/chat'
+
 # Give the Model Time to Think
 
 In chain-of-thought prompting, you <mark>encourage the AI to "show its work" as it arrives at a conclusion</mark>. Rather than jumping straight to an answer, the model follows a series of logical steps or considerations, as if it’s walking you through its thought process.
@@ -23,38 +25,27 @@ Chain-of-thought prompting results in <mark>responses that are more thorough, lo
 
 **Example without Chain-of-Thought prompt**
 
-<div class="chat-container">
-  <div class="message user">
-    <div class="message-avatar">🙋</div>
-    <div class="message-bubble">How many apples does Sarah have left if she starts with 12 apples and gives 7 to her friend?</div>
-  </div>
-  <div class="message assistant">
-    <div class="message-avatar">🤖</div>
-    <div class="message-bubble">If Sarah starts with 12 apples and gives 7 apples to her friend, she has 5 apples left. 🍎</div>
-  </div>
-</div>
+<Chat 
+    userMessage="How many apples does Sarah have left if she starts with 12 apples and gives 7 to her friend?"
+    assistantMessage="If Sarah starts with 12 apples and gives 7 apples to her friend, she has 5 apples left. 🍎"
+/>
 
 ---
 
 **Example with Chain-of-Thought prompt**
 
-<div class="chat-container">
-    <div class="message user">
-        <div class="message-avatar">🙋</div>
-        <div class="message-bubble">How many apples does Sarah have left if she starts with 12 apples and gives 7 to her friend? Explain your reasoning step-by-step.</div>
-    </div>
-    <div class="message assistant">
-        <div class="message-avatar">🤖</div>
-        <div class="message-bubble">
-            To determine how many apples Sarah has left, we follow these steps:
-            1. **Start with the total number of apples Sarah has initially**: Sarah starts with 12 apples.
-            2. **Subtract the number of apples Sarah gives away to her friend**: Sarah gives 7 apples to her friend. To find out how many apples remain, subtract 7 from 12.
-            3. **State the result**: After giving away 7 apples, Sarah has 5 apples left.
+<Chat 
+    userMessage="How many apples does Sarah have left if she starts with 12 apples and gives 7 to her friend? Explain your reasoning step-by-step."
+    assistantMessage={`To determine how many apples Sarah has left, we follow these steps:
 
-            **Final Answer: Sarah has 5 apples left.**
-        </div>
-    </div>
-</div>
+1. Start with the total number of apples Sarah has initially: Sarah starts with 12 apples.
+
+2. Subtract the number of apples Sarah gives away to her friend: Sarah gives 7 apples to her friend. To find out how many apples remain, subtract 7 from 12.
+
+3. State the result: After giving away 7 apples, Sarah has 5 apples left.
+
+Final Answer: Sarah has 5 apples left.`}
+/>
 
 ## References & Footnotes
 
