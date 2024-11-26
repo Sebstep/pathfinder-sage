@@ -23,3 +23,8 @@ mark-green {
     background-color: var(--mark-green-bg);
     color: var(--mark-text-color);
 }
+
+.footnotes {
+    font-size: 0.8rem;
+    color: #555;
+}
