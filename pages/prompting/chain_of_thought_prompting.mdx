@@ -4,17 +4,17 @@ import Chat from '../../components/chat'
 
 In chain-of-thought prompting, you <mark>encourage the AI to "show its work" as it arrives at a conclusion</mark>. Rather than jumping straight to an answer, the model follows a series of logical steps or considerations, as if it’s walking you through its thought process.
 
-Chain-of-thought prompting results in <mark>responses that are more thorough, logical, and coherent</mark>. This method is particularly useful for complex tasks, like solving multi-step problems or analyzing nuanced topics, where a structured approach is essential.
+Chain-of-thought prompting results in <mark>responses that are more thorough, logical, and coherent</mark>.[^Wei2022Chainofthought] This method is particularly useful for complex tasks, like solving multi-step problems or analyzing nuanced topics, where a structured approach is essential.
 
 ## Benefits of Chain-of-Thought Prompting
 
 - **Enhanced Clarity**: Breaking down complex questions into smaller steps allows the model to consider each part carefully, reducing the chance of misunderstanding or glossing over details.
-- **Improved Accuracy**: With a step-by-step approach, the AI can "double-check" each stage, which often results in more reliable outcomes for calculations or logic-heavy tasks to reduce [hallucinations](/genai/limitations#hallucinations).[^1]
+- **Improved Accuracy**: With a step-by-step approach, the AI can "double-check" each stage, which often results in more reliable outcomes for calculations or logic-heavy tasks to reduce [hallucinations](/genai/limitations#hallucinations).[^Ji2023Mitigating]
 - **Transparency**: Following the model’s reasoning can be as valuable as the final answer. Chain-of-thought responses make the process visible and understandable.
 
 ## How to Create a Chain-of-Thought Prompt?
 
-1. **Ask for Step-by-Step Reasoning**: Start by explicitly requesting that the model explain its thinking, e.g., `Walk through each step` or `Explain your reasoning step-by-step.`
+1. **Ask for Step-by-Step Reasoning**: Start by explicitly requesting that the model explain its thinking, e.g., `Walk through each step` or `Explain your reasoning step-by-step.`[^Kojima2023Large]
 2. **Break Down Complex Tasks**: When dealing with multi-layered problems, specify individual components the model should address, like analyzing cause and effect, listing pros and cons, or calculating intermediate values.
 3. **Encourage Reflective Thinking**: If appropriate, ask the model to evaluate each stage before moving to the next, encouraging it to consider multiple perspectives or possibilities.
 
@@ -47,6 +47,15 @@ Chain-of-thought prompting results in <mark>responses that are more thorough, lo
 Final Answer: Sarah has 5 apples left.`}
 />
 
+## Further Reading
+
+- [Chain-of-Thought Prompting at LearnPrompting.org](https://learnprompting.org/docs/intermediate/chain_of_thought)
+- [Chain-of-Thought Prompting at PromptingGuide.ai](https://www.promptingguide.ai/techniques/cot)
+
 ## References & Footnotes
 
-[^1]: Ji, Z., Yu, T., Xu, Y., Lee, N., Ishii, E., & Fung, P. (2023). **Towards mitigating LLM hallucination via self reflection**. *Findings of the Association for Computational Linguistics: EMNLP 2023*, 1827–1843. https://doi.org/10.18653/v1/2023.findings-emnlp.123
+[^Ji2023Mitigating]: Ji, Z., Yu, T., Xu, Y., Lee, N., Ishii, E., & Fung, P. (2023). **Towards mitigating LLM hallucination via self reflection**. *Findings of the Association for Computational Linguistics: EMNLP 2023*, 1827–1843. https://doi.org/10.18653/v1/2023.findings-emnlp.123
+
+[^Kojima2023Large]: Kojima, T., Gu, S. S., Reid, M., Matsuo, Y., & Iwasawa, Y. (2023). **Large language models are zero-shot reasoners**. *arXiv*. https://doi.org/10.48550/arXiv.2205.11916
+
+[^Wei2022Chainofthought]: Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q. V., & Zhou, D. (2022). **Chain-of-thought prompting elicits reasoning in large language models**. In S. Koyejo, S. Mohamed, A. Agarwal, D. Belgrave, K. Cho, & A. Oh (Eds.), *Advances in Neural Information Processing Systems* (Vol. 35, pp. 24824–24837). Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2022/file/9d5609613524ecf4f15af0f7b31abca4-Paper-Conference.pdf
