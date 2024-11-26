@@ -1,17 +1,42 @@
+import Chat from '../../components/chat'
+
 # Instruct the Model Throughout the Prompt
 
-When writing instructions, provide adequate context before describing the task you want the model to perform.
+Instructive language is the key to achieving clear, actionable, and useful outputs. Unlike descriptive language, which merely provides information, instructive language guides the model step-by-step, ensuring it understands not just what the task is, but how to approach it.
 
-```md copy
-Read the following excerpt from an essay:
+## The Importance of Instructive Prompts
 
-“Despite the popular belief, there's no solid evidence supporting the idea that video games lead to violent behavior.
-Research on the topic is often contradictory and inconclusive. Some studies found a correlation, but correlation doesn't imply causation.
-So, it's premature to blame video games for violence in society.”
+Generative AI models process instructions more effectively when they are framed as explicit actions. For example, instead of saying, “This is an excerpt discussing video games and violence,” an instructive prompt would say, “Read the following excerpt and analyze it based on specific criteria.” This proactive phrasing eliminates ambiguity, directing the model to perform the task instead of simply recognizing the content.
 
-Provide feedback on this excerpt based on the following criteria: grammar, clarity, coherence, argument quality, and use of evidence.
-Provide a score from 1-10 for each attribute, along with reasoning for your score.
-```
+Instructive language ensures the model delivers exactly what you need. By specifying the type of analysis or output you want, such as “Provide feedback on grammar, clarity, coherence, argument quality, and use of evidence, scoring each from 1-10,” you reduce the risk of irrelevant or incomplete responses.
+
+AI can handle multi-step or nuanced tasks more effectively when guided with instructive prompts. For instance, asking the model to “Analyze the following text and provide feedback on specific criteria, including examples where applicable,” ensures it knows to both evaluate and substantiate its assessments. Without this guidance, the model might default to generalities, which can dilute the quality of its output.
+
+---
+
+**Example of an instruction-based prompt**
+
+<Chat 
+  userMessage={`Read the following excerpt from an essay:
+
+"Despite the popular belief, there's no solid evidence supporting the idea that video games lead to violent behavior. Research on the topic is often contradictory and inconclusive. Some studies found a correlation, but correlation doesn't imply causation. So, it's premature to blame video games for violence in society."
+
+Provide feedback on this excerpt based on the following criteria: grammar, clarity, coherence, argument quality, and use of evidence. Assign a score from 1-10 for each attribute, along with reasoning for your score.`} 
+  assistantMessage={`1.	Grammar (Score: 10/10)
+	•	The grammar is flawless. The sentences are well-constructed, and there are no grammatical errors, awkward phrasing, or typos.
+	
+2.	Clarity (Score: 9/10)
+	•	The excerpt is easy to read and understand. Each sentence communicates its point effectively. However, the phrase “correlation doesn’t imply causation” might be more accessible to a broader audience if explained briefly (e.g., “correlation doesn’t imply causation, meaning a link doesn’t necessarily mean one causes the other”).
+	
+3.	Coherence (Score: 8/10)
+	•	The ideas flow logically from one to the next, starting with the claim about popular belief, moving to research findings, and concluding with the argument that blaming video games is premature. However, the conclusion could be tied back more explicitly to the introductory statement for greater cohesion.
+	
+4.	Argument Quality (Score: 7/10)
+	•	The argument is reasonable and balanced but lacks depth. It mentions the contradictory nature of research without elaborating on specific studies or providing examples, which would strengthen the argument. Furthermore, addressing potential counterarguments (e.g., why some believe the correlation is significant) would make the reasoning more robust.
+	
+5.	Use of Evidence (Score: 6/10)
+	•	While the excerpt references research, it is vague about specifics. Mentioning particular studies or findings (even briefly) would lend credibility and persuasiveness to the argument. As it stands, the lack of concrete evidence weakens the impact.`} 
+/>
 
 Note the following points from the example above:
 
