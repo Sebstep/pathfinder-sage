@@ -1,3 +1,5 @@
+import Chat from '../../components/chat'
+
 # Provide Examples
 
 Few-shot prompting is a powerful technique in prompt engineering that involves providing the model with examples of desired responses before asking it to generate new output. By showing the AI how to respond, you can guide it toward the correct format, tone, and level of detail, especially in complex or nuanced tasks. This approach is especially helpful for “training” the model on specific expectations within a single prompt.
@@ -24,10 +26,21 @@ Few-shot prompting typically uses two to five examples to balance clarity with c
 - Provide Examples in a Consistent Format: Structure each example consistently to reinforce the desired pattern, tone, or format for the model to follow.
 - Guide the Model with a Final Prompt: After the examples, give a prompt that closely mirrors the examples’ format, ensuring the model understands to apply the demonstrated style to the new task.
 
-## Example of a Few-Shot Prompt
+## Example of Few-Shot Prompting
 
-```
-Example 1:  
+**A prompt without examples**
+
+<Chat 
+  userMessage='Who wrote pride and prejudice?' 
+  assistantMessage='Pride and Prejudice was written by Jane Austen. It was first published in 1813 and remains one of her most popular and enduring works, known for its witty social commentary and memorable characters like Elizabeth Bennet and Mr. Darcy.' 
+/>
+
+---
+
+**A prompt with examples**
+
+<Chat 
+    userMessage={`Example 1:
 Q: "What is the capital of France?"  
 A: "The capital of France is Paris."
 
@@ -35,8 +48,13 @@ Example 2:
 Q: "What is the largest planet in our solar system?"  
 A: "The largest planet in our solar system is Jupiter."
 
-Q: "Who wrote 'Pride and Prejudice'?"
-```
+Q: "Who wrote Pride and Prejudice?"`}
+    assistantMessage='A: “The author of ‘Pride and Prejudice’ is Jane Austen.”'
+/>
+
+{/* TODO: Callout to mention that the structure was replicated with the A: and the quotation marks. */}
+
+
 
 {/* TODO: A good and education-related few-shot prompt. */}
 
