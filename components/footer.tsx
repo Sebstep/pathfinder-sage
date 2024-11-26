@@ -1,22 +1,21 @@
-import React from 'react';
-import Link from "next/link";
-import Image from 'next/image';
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
-function Logo() {
+function FooterLogo() {
     return (
         <div className="text-lg font-extrabold">
             <span className="text-eu-blue">Erasmus+ Pathfinder</span>
         </div>
-    );
+    )
 }
-
 
 export default function MultiColumns() {
     return (
         <footer className="container mx-auto px-8 py-12 space-y-12 md:flex md:space-y-0 md:justify-between">
             {/* left Column */}
             <div className="flex flex-col space-y-4 md:w-5/12">
-                <Logo />
+                <FooterLogo />
                 <p className="text-sm text-slate-600">
                     Pioneering AI Technology in Higher Education to Facilitate
                     Innovation and Nurture the Development of Entrepreneurial
@@ -28,7 +27,9 @@ export default function MultiColumns() {
                         href="https://erasmus-plus.ec.europa.eu/projects/search/details/2023-2-LI01-KA220-HED-000178579"
                         className="text-blue-500 hover:underline"
                         target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer"
+                        aria-label="Erasmus+ Pathfinder Project link"
+                    >
                         2023-2-LI01-KA220-HED-000178579
                     </Link>
                 </p>
@@ -50,11 +51,11 @@ export default function MultiColumns() {
                 </p>
                 <div className="mt-4">
                     <Image
-                    src="/funded-by-eu-wide.png"
-                    alt=""
-                    width={200}
-                    height={50}
-                    className="mx-auto md:mx-0"
+                        src="/funded-by-eu-wide.png"
+                        alt=""
+                        width={200}
+                        height={50}
+                        className="mx-auto md:mx-0"
                     />
                 </div>
             </div>
