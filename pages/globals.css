@@ -2,11 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-mark {
-    background-color: #ffe6ad;
+:root {
+    --mark-bg: #ffe6ad;
+    --mark-red-bg: #fec3c2;
+    --mark-green-bg: #98d0a5;
+    --mark-text-color: #000;
 }
 
+mark {
+    background-color: var(--mark-bg);
+    color: var(--mark-text-color);
+}
 
 mark-red {
-    background-color: #FEC3C2;
+    background-color: var(--mark-red-bg);
+    color: var(--mark-text-color);
+}
+
+mark-green {
+    background-color: var(--mark-green-bg);
+    color: var(--mark-text-color);
 }
