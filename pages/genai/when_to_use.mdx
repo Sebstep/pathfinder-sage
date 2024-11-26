@@ -6,32 +6,32 @@ import Link from 'next/link'
 Generative AI, such as language models, can be powerful tools in education, but their use requires thoughtful consideration. Before delegating a task to an AI, ask yourself these four critical questions.
 
 <Steps>
-## What happens if the output is wrong?
+## What happens if the output is incorrect?
 
-If your task requires absolute accuracy—such as diagnosing an issue, grading exams, or publishing official materials—AI may not be the safest choice. Language models can produce plausible-sounding but incorrect or misleading answers, often referred to as *hallucinations* (see [Limitations](/genai/limitations)).
+If your task requires absolute accuracy—such as grading exams, diagnosing complex issues, or publishing official materials—AI may not be the safest choice. Language models can produce plausible-sounding but incorrect or misleading outputs, often referred to as *hallucinations* (see [Limitations](/genai/limitations)).
 
 When accuracy is critical, <mark>use AI as part of an *augmented decision-making process* rather than the sole source of information</mark>. For example, ask AI to generate a draft that you can refine and verify.
 
 {/* TODO: expand upon algorithmic(-augmented) decision-making */}
 
-## How will you check the accuracy of the answer?
+## How will you check the accuracy of the output?
 
 AI is your assistant, not a replacement. <mark>Only use AI for tasks you could solve independently, given enough time</mark>. If you're unfamiliar with the topic, the AI's errors may go unnoticed, potentially misleading your students.
 
-## What data are you entering?
+## What data are you sharing with the AI?
 
-Generative AI models are hosted by operators, meaning any data you provide is sent to their servers. Avoid inputting sensitive data such as personal information, student grades, or proprietary materials (unless you have obtained informed consent). 
+Generative AI models are hosted by operators, meaning any data you provide is sent to their servers and may be processed outside your control. Avoid inputting sensitive data such as personal information, student grades, or proprietary materials (unless you have obtained informed consent). 
 
 As a rule of thumb, we recommend that you <mark>put nothing into a prompt that you would not post publicly on your personal social media</mark>. 
 
 If privacy is critical, explore running AI models locally on your computer. Open-source models such as [LLaMA <i className="fa-solid fa-arrow-up-right-from-square"></i>](https://www.llama.com/) can offer privacy, but they require basic programming knowledge and adequate hardware.
 
-## Do you require ownership of the answer?
+## Do you require ownership of the output?
 
-Generative <mark>AI outputs can usually be claimed as your own</mark>,[^Eshraghian2020Human] provided you comply with the model's terms of use and applicable laws. However, there are nuances to consider, particularly if the output is for commercial purposes or resembles existing copyrighted material. 
+Generative <span mark-color="yellow">AI outputs can usually be claimed as your own</span>,[^Eshraghian2020Human] provided you comply with the model's terms of use and applicable laws. However, there are nuances to consider, particularly if the output is for commercial purposes or resembles existing copyrighted material. 
 
-- <mark-green>When the creative outcome is driven by predominant human intellectual activity</mark-green>—where a person makes free and creative choices during conception, execution, or revision—the work is generally eligible for copyright protection.[^Hugenholtz2021Copyright] The Court of Justice of the European Union supports this position, emphasizing that existing IP laws apply when AI is used as an assistive tool.[^CJEU2011Panier]
-- On the other hand, <mark-red>if AI operates autonomously</mark-red> with little to no substantial human contribution to the creative output, IP protection may not apply. Minor modifications to AI-generated outputs, such as light editing, are usually insufficient to establish legal ownership.[^Novelli2024Generative]
+- <span mark-color="green">When the creative outcome is driven by predominant human intellectual activity</span>—where a person makes free and creative choices during conception, execution, or revision—the work is generally eligible for copyright protection.[^Hugenholtz2021Copyright] The Court of Justice of the European Union supports this position, emphasizing that existing IP laws apply when AI is used as an assistive tool.[^CJEU2011Panier]
+- On the other hand, <span mark-color="red">if the AI operates autonomously with little to no human contribution</span> to the creative output, IP protection may not apply. Minor modifications to AI-generated outputs, such as light editing, are usually insufficient to establish legal ownership.[^Novelli2024Generative]
 - Language models must not be used for legal infringements (e.g., copyright infringements). Asking AI to create something "in the style of [Author/Artist X]" could lead to outputs that resemble copyrighted work. In this case, it could be legally unclear who owns the result - the user, the artist or the model developer.[^Guadamuz2021Androids] [^Hilty2021Intellectual]
 - Importantly, when an output is provided directly to users (i.e., without a human in the loop), it must be clear to users that the answers do not originate from a human being. 
 
@@ -47,6 +47,6 @@ Generative <mark>AI outputs can usually be claimed as your own</mark>,[^Eshraghi
 
 [^Hilty2021Intellectual]: Hilty, R. M., Hoffmann, J., & Scheuerer, S. (2021). **Intellectual property justification for artificial intelligence**. In J.-A. Lee, R. Hilty, & K.-C. Liu (Eds.), *Artificial Intelligence and Intellectual Property* (1st ed., pp. 50–72). Oxford University Press. https://doi.org/10.1093/oso/9780198870944.003.0004
 
-[^Hugenholtz2021Copyright]: Hugenholtz, P. B., & Quintais, J. P. (2021). **Copyright and artificial creation: Does EU copyright law protect AI-assisted output?** *International Review of Intellectual Property and Competition Law*, 52(9), 1190–1216. https://doi.org/10.1007/s40319-021-01115-0
+[^Hugenholtz2021Copyright]: Hugenholtz, P. B., & Quintais, J. P. (2021). **Copyright and artificial creation: Does EU copyright law protect AI-assisted output?** *International Review of Intellectual Property and Competition Law*, *52*(9), 1190–1216. https://doi.org/10.1007/s40319-021-01115-0
 
 [^Novelli2024Generative]: Novelli, C., Casolari, F., Hacker, P., Spedicato, G., & Floridi, L. (2024). **Generative AI in EU law: Liability, privacy, intellectual property, and cybersecurity** (Version 4). *arXiv*. https://doi.org/10.48550/ARXIV.2401.07348
