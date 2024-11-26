@@ -1,5 +1,12 @@
-import React from 'react'
+import React from 'react';
 
+/**
+ * Chat component to display user and assistant messages.
+ * 
+ * @param {Object} props - Component props
+ * @param {string} props.userMessage - Message from the user
+ * @param {string} props.assistantMessage - Message from the assistant
+ */
 export default function Chat({ userMessage, assistantMessage }) {
     return (
         <div className="chat-container">
@@ -12,5 +19,5 @@ export default function Chat({ userMessage, assistantMessage }) {
                 <div className="message-bubble">{assistantMessage}</div>
             </div>
         </div>
-    )
+    );
 }
