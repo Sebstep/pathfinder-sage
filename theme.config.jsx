@@ -1,7 +1,15 @@
 import Footer from '/components/footer'
 
+function HeaderLogo() {
+    return (
+        <div className="text-lg font-extrabold">
+            <span className="text-eu-blue">Pathfinder SAGE</span>
+        </div>
+    );
+}
+
 export default {
-    logo: <span>Pathfinder SAGE</span>,
+    logo: <HeaderLogo />,
     project: {
         link: 'https://github.com/Sebstep/pathfinder-sage'
     },
@@ -26,7 +34,7 @@ export default {
     banner: {
         dismissible: false,
         key: "indevelopment",
-        content: "🚧 This site is currently under heavy development. Please be aware that its content is far from final and may change at any time. 🚧",
+        content: "🚧 This site is under development; its content is not final and may change at any time. 🚧",
     },
     head: (
         <>
