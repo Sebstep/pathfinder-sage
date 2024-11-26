@@ -2,7 +2,7 @@ import Chat from '../../components/chat'
 
 # Provide Examples
 
-Few-shot prompting is a powerful technique in prompt engineering that involves providing the model with examples of desired responses before asking it to generate new output. By showing the AI how to respond, you can guide it toward the correct format, tone, and level of detail, especially in complex or nuanced tasks. This approach is especially helpful for “training” the model on specific expectations within a single prompt.
+Few-shot prompting is a powerful technique in prompt engineering that involves <mark>providing the model with examples of desired responses</mark> before asking it to generate new output. By showing the AI how to respond, you can guide it toward the correct format, tone, and level of detail, especially in complex or nuanced tasks.[^Brown2020Language] This approach is especially helpful for “training” the model on specific expectations within a single prompt.
 
 Imagine you’re a teaching assistant explaining a tricky concept to students. Rather than just explaining it once, you go through a few worked examples, showing step-by-step how to tackle similar problems. By seeing these examples, students understand how to approach their own problems in a similar way.
 
@@ -10,21 +10,21 @@ Few-shot prompting works the same way for AI. By providing a set of examples, yo
 
 ## What is Few-Shot Prompting
 
-In few-shot prompting, you offer the model a few examples that illustrate the desired response style, content, or format. These examples act as mini-tutorials, showing the model what to do so that it can mimic the same structure and approach in its output. Think of it as giving a “sample set” so the model can “learn by example” within the prompt.
+In few-shot prompting, you offer the model a few examples that <mark>illustrate the desired response style, content, and format</mark>. These examples act as mini-tutorials, showing the model what to do so that it can <mark>mimic the same structure and approach in its output</mark>. Think of it as giving a “sample set” so the model can “learn by example” within the prompt.
 
-Few-shot prompting typically uses two to five examples to balance clarity with conciseness. This technique can help the model perform tasks like answering questions, translating, formatting data, or solving problems with greater precision.
+Few-shot prompting typically uses <mark>two to five examples</mark> to balance clarity with conciseness. This technique can help the model perform tasks like answering questions, translating, formatting data, or solving problems with greater precision.
 
 ## Benefits of Few-Shot Prompting
 
-- Contextual Guidance: By seeing examples, the AI understands what the output should look like, reducing ambiguity and improving relevance.
-- Consistency in Output: Examples create a reference point, helping the AI produce responses in a similar tone, style, or structure.
-- Improved Accuracy for Complex Tasks: For intricate prompts, few-shot examples clarify expectations, leading to more accurate and targeted responses.
+- **Contextual Guidance**: By seeing examples, the AI understands what the output should look like, reducing ambiguity and improving relevance.
+- **Consistency in Output**: Examples create a reference point, helping the AI produce responses in a similar tone, style, or structure.
+- **Improved Accuracy for Complex Tasks**: For intricate prompts, few-shot examples clarify expectations, leading to more accurate and targeted responses.
 
 ## How to Use Few-Shot Prompting
 
-- Select Clear, Relevant Examples: Choose examples that best illustrate your ideal output. Ensure they align with the task and highlight specific qualities you want in the final response.
-- Provide Examples in a Consistent Format: Structure each example consistently to reinforce the desired pattern, tone, or format for the model to follow.
-- Guide the Model with a Final Prompt: After the examples, give a prompt that closely mirrors the examples’ format, ensuring the model understands to apply the demonstrated style to the new task.
+- **Select Clear, Relevant Examples**: Choose examples that best illustrate your ideal output. Ensure they align with the task and highlight specific qualities you want in the final response.
+- **Provide Examples in a Consistent Format**: Structure each example consistently to reinforce the desired pattern, tone, or format for the model to follow.
+- **Guide the Model with a Final Prompt**: After the examples, give a prompt that closely mirrors the examples’ format, ensuring the model understands to apply the demonstrated style to the new task.
 
 ## Example of Few-Shot Prompting
 
@@ -71,3 +71,7 @@ Be clear about what you want. Specify the format, style, and any particular deta
 - language & style
 
 */}
+
+## References & Footnotes
+
+[^Brown2020Language]: Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D. M., Wu, J., Winter, C., … Amodei, D. (2020). **Language models are few-shot learners**. *arXiv*. https://doi.org/10.48550/arXiv.2005.14165
