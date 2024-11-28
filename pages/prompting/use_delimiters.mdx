@@ -1,24 +1,62 @@
 # Use delimiters and special tokens
 
-Think of delimiters and tags as the drawers in a filing cabinet, each holding specific types of information. When you label each drawer clearly—like "Instructions," "Example," or "Output"—it's easier to find what you need, and there’s no confusion about where things go. In prompt engineering, delimiters act the same way, “filing” different parts of the prompt so the AI can "pull out" each section without mixing it up.
+Delimiters and special tokens are like organizational tools for prompt engineering, comparable to <mark>well-labeled sections in a filing cabinet</mark>. Just as clear labels help you find and organize documents efficiently, delimiters provide structure and clarity, ensuring the AI <mark>interprets and responds to each part of a prompt accurately</mark>.
 
-Delimiters and special tokens (like XML tags) are powerful tools in prompt engineering for structuring input and making it easier for AI to understand and respond accurately to complex instructions. By enclosing information within clear boundaries, delimiters and tags allow you to specify instructions, set sections of content apart, or define formats for structured responses.
+By defining clear boundaries, delimiters help you communicate more effectively with the AI, improving its ability to generate precise and relevant outputs. This is especially critical for complex prompts where multiple elements—like instructions, examples, and desired outputs—must be distinctly understood.
 
 ## What are Delimiters and Special Tokens?
 
-Delimiters are symbols or characters—such as quotation marks, brackets, or XML-like tags—that are used to separate different parts of text. In prompt engineering, they are often employed to highlight specific instructions, distinguish between multiple sections, or mark particular content types (like input/output or questions/answers).
+Delimiters are symbols, characters, or tags that separate different sections of a prompt, ensuring the AI recognizes each segment’s role. 
 
-For instance, enclosing a sentence in quotation marks ("…") signals to the AI that this is a distinct part of the prompt, while XML tags like `<instruction>...</instruction>` can mark off instructions, making the purpose of each section clear and reducing ambiguity.
+**Simple delimiters**: 
+- <mark>Simple enclosing delimiters</mark>: Quotation marks&nbsp;`"…"` are common and work well for individual words to a few sentences. However, since they use the same glyph for opening and closing, they can be less effective for longer sections. Parentheses&nbsp;`(…)`, brackets&nbsp;`[…]`, or curly braces&nbsp;`{…}` use separate unambiguous glyphs for opening and closing, making them more suitable for longer sections and more complex use cases.
+- <mark>Simple separating delimiters</mark>, like triple dashes&nbsp;`---` or triple hashes&nbsp;`###` work well to separate sections when they are placed on their own line between two paragraphs.
+
+**Structured delimiters**: 
+
+- <mark>Markdown headings</mark> can be used like headings in Word documents. For example, `# Instructions` followed by `## Step 1` and `## Step 2`. These are placed on their own line between two pagraphs.
+- <mark>XML-tags</mark>, like `<instruction>...</instruction>` or `<example>...</example>` can be used for highly complex structures spanning pages worth of text where the AI needs to understand the role of each section. XML-Tags can also be nested, for example, `<instructions><step1>…</step1><step2>…</step2></instructions>`.
 
 ## Benefits of Using Delimiters
 
-- **Improved Clarity**: Delimiters make instructions stand out, helping the model differentiate between different parts of the prompt.
-- **Precise Structure**: By defining clear sections, you can specify the format of the output, especially useful for tasks that require a structured response (e.g., lists, tables).
-- **Reduced Misinterpretation**: When each part of the prompt is marked clearly, the AI is less likely to mix up or ignore details, improving accuracy.
+- **Improved Clarity**: By segmenting instructions, examples, and desired output formats, delimiters make prompts easier for the AI to parse. This reduces the likelihood of misinterpretation and ensures the AI processes each section as intended.
+
+- **Precise Structure**: Structured delimiters allow you to define the exact format for responses or [provide examples](/prompting/give_examples), which is especially useful for generating code, tables, or structured data.
+
+- **Reduced Misinterpretation**: By clearly delineating instructions, input data, and expected outputs, you minimize errors caused by the AI treating one section as another. This is particularly helpful for complex tasks involving multiple elements.
 
 ## How to Use Delimiters and Special Tokens
 
 - **Separate Instructions from Content**: Use delimiters to keep instructions distinct from the main content, ensuring the model understands which sections to treat as directives versus response material.
 - **Define Input and Output Sections**: For prompts that involve multiple inputs or outputs, use tags to label each section. This helps the AI process each part as intended, especially when dealing with multiple questions or data points.
+
+```md copy
+Instruction: Generate a summary of the text below.  
+---
+Text: "The quick brown fox jumps over the lazy dog."  
+---
+Output:  
+```
+
+```md copy
+<task>Summarize the following text:</task>  
+<text>The quick brown fox jumps over the lazy dog.</text>  
+<output_format>Summary in one sentence</output_format>
+```
+
+```md copy
+…
+Present your final lessson plan within <lesson_plan> tags, formatted as follows:
+
+<lesson_plan>
+1. [Session/Activity Name] - [Duration] ([Cumulative Time])
+   Brief description of the session or activity
+
+2. [Session/Activity Name] - [Duration] ([Cumulative Time])
+   Brief description of the session or activity
+
+[Continue for all sessions and activities]
+</lesson_plan>
+```
 
 {/* TODO: Example for a good, somewhat long delimiter-based prompt */}
