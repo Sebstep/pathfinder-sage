@@ -2,17 +2,17 @@
 
 ## Introduction to Role Prompting
 
-Imagine going to the doctor with a mysterious ache, but instead of giving details, you just say, "Doc, something feels wrong." The doctor, scratching their head, tries guessing: "Stomachache? Headache? Heartbreak?" Now you’re both stuck in the guessing game, wasting time and patience, as the doctor fumbles through every ailment known to medical science.
+Imagine going to the doctor with a mysterious ache, but instead of giving details, you just say, "Doc, something feels wrong." The doctor, scratching their head, tries guessing: "Stomachache? Headache? Heartbreak?" Frustration builds as both of you stumble through a guessing game, wasting time and missing the mark.
 
-In role prompting, <mark>you assign the model a defined role or profession</mark>, such as "teaching assistant," "market researcher," or "business strategist." This role acts as a framework, guiding the AI’s tone, language, and depth of response. Instead of a generic answer, <mark>the model adapts its output to align with the expectations and responsibilities associated with the assigned job</mark>.
+In role prompting, <mark>you assign the model a defined role or profession</mark>, such as "teaching assistant," "market researcher," or "business strategist." This role acts as a framework, guiding the AI’s tone, language, and depth of response. Instead of a generic answer, <mark>the model aligns its output with the expectations and responsibilities of the assigned role</mark>.
 
 ## Benefits of Role Prompting
 
-1. **Focus and Expertise**: By simulating a role, the model draws on relevant knowledge areas, which can lead to more in-depth and specialized responses.
-2. **Contextual Language**: Role prompting helps shape the language and tone of the output, making it suitable for specific audiences (e.g., formal for a "legal advisor" vs. friendly for a "personal assistant").
-3. **Creativity and Structure**: For complex or creative tasks, role prompting provides structure. For instance, when acting as a "storyteller," the model knows to follow narrative structures rather than a factual approach.
+1. **Focus and Expertise**: Assigning a role encourages the model to draw on relevant knowledge and expertise. This approach yields more nuanced and specialized responses.
+2. **Contextual Language**: Role prompts shape the tone and language of responses to fit the audience. For example, a "legal advisor" role ensures formal, precise language, while a "personal assistant" role prioritizes a friendly, conversational tone.
+3. **Creativity and Structure**: For tasks requiring creativity or complex outputs, role prompting adds structure. A model acting as a "storyteller," for instance, will follow narrative conventions rather than providing purely factual content.
 
-By giving the AI a clear job and goal (just like you’d tell the doctor what’s bugging you!), you avoid that dreaded wild-goose chase of vague answers. So next time you’re crafting a prompt, don’t be the patient who only mutters, "It hurts." Give specifics, give roles, and save everyone some valuable guesswork!
+By giving the AI a clear role and objective (much like telling the doctor exactly where it hurts), you eliminate guesswork, streamline interactions, and enhance the quality of AI-generated responses.
 
 ## Examples of Role Prompting
 
@@ -25,7 +25,7 @@ By giving the AI a clear job and goal (just like you’d tell the doctor what’
   </div>
   <div class="message assistant">
     <div class="message-avatar">🤖</div>
-    <div class="message-bubble">Bad response</div>
+    <div class="message-bubble">*[Unstructured and unhelpful response]*</div>
   </div>
 </div>
 
@@ -35,11 +35,12 @@ By giving the AI a clear job and goal (just like you’d tell the doctor what’
   <div class="message user">
     <div class="message-avatar">🙋</div>
     <div class="message-bubble">
-      You are a financial analyst explaining trends to a non-expert audience.
+      You are a financial analyst explaining trends to a non-expert audience. Analyze this data. […]
     </div>
   </div>
   <div class="message assistant">
     <div class="message-avatar">🤖</div>
-    <div class="message-bubble">Good response</div>
+    <div class="message-bubble">*[Clear, audience-tailored response]*</div>
   </div>
 </div>
+
