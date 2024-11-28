@@ -12,7 +12,7 @@ function FooterLogo() {
 
 export default function MultiColumns() {
     return (
-        <footer className="container mx-auto px-8 py-12 space-y-12 md:flex md:space-y-0 md:justify-between">
+        <footer className="container mx-auto px-8 space-y-12 md:flex md:space-y-0 md:justify-between">
             {/* left Column */}
             <div className="flex flex-col space-y-4 md:w-5/12">
                 <FooterLogo />
