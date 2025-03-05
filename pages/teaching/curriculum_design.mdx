@@ -1,0 +1,122 @@
+import { Steps } from 'nextra/components'
+import { Callout } from 'nextra/components'
+
+# Using Generative AI for Curriculum Design
+
+Generative AI can be a powerful partner in curriculum design, helping educators streamline planning, spark new ideas, and save valuable time. Below is a practical, step-by-step approach to integrating AI into your curriculum design process. 
+
+<Steps>
+
+## Establish the Purpose of the Course
+
+Before utilizing AI tools, <mark>clarify the instructional purpose behind your lesson</mark>. Lesson plans should not exist solely to satisfy compliance requirements; they serve as the foundation for meaningful, standards-aligned instruction.
+
+AI can generate lesson components quickly, but effective planning requires thoughtful input. Instead of accepting the first response an AI provides, approach the process with a commitment to quality and relevance. Ask yourself:
+- What do my students need to learn?
+- How does this course connect to larger program goals, learning outcomes, or standards?
+- What outcomes, knowledge, or skills will have the greatest impact on student growth?
+
+When you provide clear objectives and context, AI can generate more relevant and meaningful materials. Rather than accepting the first draft AI produces, refine its output to ensure it aligns with your vision and the unique needs of your students. 
+
+<Callout>
+   **Example prompt:** 
+   
+   `Help me design a syllabus for an advanced biology course focused on critical analysis of research papers, emphasizing collaborative learning.`
+</Callout>
+
+## Begin with the Standards
+
+Effective lessons begin with the standards. Standards define the proficiency levels students must achieve and establish the necessary rigor for the lesson. AI can support this process by deconstructing complex standards into clear, teachable goals.
+
+Once the key learning goals are identified, refine them to ensure they promote higher-order thinking and can be assessed effectively. AI can revise goals using frameworks like Bloom’s Taxonomy to emphasize analysis, evaluation, and creation.
+
+<Callout>
+   **Example prompt:**
+   
+   `Rewrite these learning objectives to emphasize higher-order thinking using Bloom’s Taxonomy.`
+</Callout>
+
+## Provide Context on the Lesson
+
+Begin by asking an AI to draft a course outline or syllabus based on your subject, goals, and duration of the course. For example, provide the AI with the course title, key topics to cover, number of weeks, and assessment types, and ask it to generate a syllabus. You might get a rough weekly breakdown of themes, readings, and assignments in seconds. Use this AI-generated syllabus as a starting point – it’s much easier to refine or rearrange an existing outline than to start from scratch.
+
+## Create Course Materials and Reading Lists
+
+Prompt the AI to suggest a list of reading materials or resources for a given week or module. For instance, you could ask, "`What are some seminal papers or book chapters on [specific topic] for advanced undergraduates?`" The AI can propose titles and authors (though always double-check for actual existence and relevance, as [AI sometimes invents sources](/genai/limitations#hallucinations)).
+
+Additionally, AI can summarize large texts for you: with a few sentences of prompt, an LLM can produce summaries of articles or videos you’re considering for class. This allows you to quickly gauge if a resource is suitable. Some educators even use AI to generate case studies or examples tailored to their course – for example, "`Give me a hypothetical case study illustrating [concept] in [your field]`". This can produce fresh material to discuss in class. While the AI might not always get every detail right, these suggestions can enrich your curriculum design with diverse content ideas. Always verify that any reading or case study actually exists and meets your quality standards before including it in an official syllabus.
+
+## Create Assessments and Quizzes
+
+See [Creating and Revising Exam Questions](/teaching/exam_questions).
+
+## Enhance Interactive Learning Experiences
+
+Curriculum design isn’t just about content – it's also about how students will engage. AI can assist in brainstorming interactive elements to include in your course. For example, you could ask an AI to "`suggest some engaging in-class activities or projects for a unit on [Subject]`". Educators have used AI to come up with simulation ideas, debate prompts, or collaborative project outlines. Some advanced uses include creating role-play scenarios: an AI can generate a script where it "acts" as a historical figure or an industry expert for students to interview (see [Assign the Model a Job](/prompting/assign_job)), bringing variety to the learning experience. Others have explored AI-generated educational games; with the right prompt, an AI might outline a simple game or puzzle related to your content. For example, an instructor asked an AI to simulate a student peer in a discussion, which was then used to pose questions to the class, stimulating critical thinking in an interactive way. 
+
+When planning your curriculum, you can incorporate these AI-inspired activities to make the course more dynamic. Just ensure any AI-driven activity is feasible and aligns with your learning goals (you’ll know your class constraints better than the AI).
+
+<Callout>
+   **Example prompt:**
+   
+   `Suggest a role-play activity to help students understand competing perspectives in environmental policy.`
+</Callout>
+
+</Steps>
+
+At each step of curriculum design, remember to inject your expertise and context. AI can generate a lot of material quickly, but it doesn't understand your specific students, school context, or the precise emphasis you want for your course. Use AI’s suggestions as a springboard: pick the best ideas, adjust phrasing and difficulty, and toss out anything that doesn't fit. When used this way, AI can greatly accelerate the curriculum design process and even spark creative ideas you might not have thought of, all while you remain in control of the final course plan.
+
+
+
+{/* TODO
+You are tasked with planning a workshop on agile methods and agile leadership. Your goal is to create a comprehensive and engaging workshop plan that covers key agile concepts and leadership principles within the given time frame.
+
+The workshop duration is:
+<workshop_duration>
+{{WORKSHOP_DURATION}}
+</workshop_duration>
+
+Follow these steps to create your workshop plan:
+
+1. Review the workshop duration and the list of agile topics carefully.
+
+2. Create an outline for the workshop, organizing the topics in a logical order that builds understanding progressively.
+
+3. Allocate time for each section of the workshop, ensuring that you stay within the total duration. Consider the following guidelines:
+   - Introduction and ice-breaker: 10-15 minutes
+   - Core content sessions: 30-45 minutes each
+   - Short breaks: 5-10 minutes between sessions
+   - Interactive activities or discussions: 15-20 minutes each
+   - Wrap-up and Q&A: 10-15 minutes
+
+4. Include at least two interactive elements in your workshop plan, such as group discussions, case studies, role-playing exercises, or hands-on activities that reinforce the agile concepts being taught.
+
+5. Ensure that you cover both agile methods and agile leadership principles throughout the workshop.
+
+6. Create a final workshop plan that includes:
+   - A brief description of each session or activity
+   - The duration of each session or activity
+   - The cumulative time at the end of each session or activity
+
+Present your final workshop plan within <workshop_plan> tags, formatted as follows:
+
+<workshop_plan>
+1. [Session/Activity Name] - [Duration] ([Cumulative Time])
+   Brief description of the session or activity
+
+2. [Session/Activity Name] - [Duration] ([Cumulative Time])
+   Brief description of the session or activity
+
+[Continue for all sessions and activities]
+</workshop_plan>
+
+Ensure that your workshop plan fits within the specified duration and covers all the provided agile topics effectively.
+
+*/}
+
+{/* TODO: Using AI to plan interactive lessons */}
+
+
+## Further Reading
+
+- Ayres, A. T. (2025, February 25). **A curriculum supervisor’s guide to AI-assisted lesson planning**. *Edutopia; George Lucas Educational Foundation*. https://www.edutopia.org/article/ai-generated-lesson-plans
