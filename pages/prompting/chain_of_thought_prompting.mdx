@@ -1,10 +1,15 @@
 import Chat from '../../components/chat'
+import { Callout } from 'nextra/components'
 
 # Give the Model Time to Think
 
 In chain-of-thought prompting, you <mark>encourage the AI to "show its work" as it arrives at a conclusion</mark>. Rather than jumping straight to an answer, the model follows a series of logical steps or considerations, as if it’s walking you through its thought process.
 
 Chain-of-thought prompting results in <mark>responses that are more thorough, logical, and coherent</mark>.[^Wei2022Chainofthought] This method is particularly useful for complex tasks, like solving multi-step problems or analyzing nuanced topics, where a structured approach is essential.
+
+<Callout type="warning" emoji="️⏰">
+  The Chain-of-Thought approach gained widespread popularity in January 2025, following the release of DeepSeek R1, a language model that excelled at reasoning through step-by-step thought processes. Soon after, other models, including OpenAI’s o1/o3 series, Anthropic’s Claude 3.7, and Google’s Gemini 2.0 Flash Thinking, adopted the technique to improve reasoning.
+</Callout>
 
 ## Benefits of Chain-of-Thought Prompting
 
