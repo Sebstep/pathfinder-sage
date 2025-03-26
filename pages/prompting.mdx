@@ -1,73 +1,32 @@
-import Chat from '../components/chat'
-
 # Prompt Engineering
 
 ## What is prompting and why does it matter?
 
-<mark>The key to unlocking the power of generative AI lies in crafting effective prompts</mark>, a practice often referred to as prompt engineering. This guide will introduce you to the principles and practices of prompt engineering, complete with tips and examples to help you optimize your interactions with advanced language models. Clear and well-structured prompts provide context and guide the AI effectively, leading to higher-quality responses.
+<mark>The key to unlocking the power of generative AI lies in crafting effective prompts</mark>, a practice often referred to as *prompt engineering*. This guide will introduce you to the principles and practices of prompt engineering, complete with tips and examples to help you optimize your interactions with advanced language models. Clear and well-structured prompts provide context and guide the AI effectively, leading to higher-quality responses.
 
 Prompt engineering involves designing, testing, and refining prompts to achieve the desired output from a generative AI. It blends creativity and precision, making it both an art and a science. By following these practices, you can make the most of generative AI’s capabilities.
-
-## Best Practices When Prompting
-
-- **Garbage in, garbage out**: Unclear context or difficult to understand prompts reduce the quality of the answer.
-
-- **Be clear and precise**: All necessary information and context for the desired answer should be included.
-
-- **Use correct grammar and spelling**: Correct grammar helps to accurately interpret the request.
-
-- **Keep prompts short**: Avoid superfluous information to focus on the essentials and relevant keywords.
-  One topic per conversation: Frequent changes of topic lead more easily to incorrect or irrelevant answers.
 
 ## Overview on Prompt Engineering
 
 - [Assign the model a job](/prompting/assign_job.mdx) explains *role-prompting* to narrow down the desired solution early in the prompt by defining a specific role for the AI.
 - [Instruct the model throughout the prompt](/prompting/instruct.mdx) provides guidance on how to give clear and continuous instructions to the AI for better responses.
-- [Use delimiters and special tokens?](/prompting/use_delimiters.mdx) describes how to use symbols and tags to structure the prompt and reduce ambiguity.
+- [Use delimiters and special tokens?](/prompting/use_delimiters.mdx) describes how to use symbols and tags to structure the prompt and reduce ambiguity in complex queries.
 - [Give the model time to think](/prompting/chain_of_thought_prompting.mdx) introduces *Chain-of-Thought* techniques for encouraging the AI to explain its reasoning step-by-step.
 - [Provide examples to guide the output](/prompting/give_examples.mdx) shows how to use few-shot prompting to illustrate the desired response style and format.
 - [Further Resources on Prompt Engineering](/prompting/further_resources.mdx) offers additional materials and references for deepening your understanding of prompt engineering.
 
----
+## In a nutshell
 
-## Example prompts you can try right now
+When interacting with generative AI, remember these key points:
 
-**Answer a question**
+**Garbage in, garbage out**: Unclear context or difficult to understand prompts reduce the quality of the answer.
 
+**Keep prompts short**: Avoid superfluous information to focus on the essentials and relevant keywords. One topic per conversation: Frequent changes of topic lead more easily to incorrect or irrelevant answers.
 
-<Chat 
-  userMessage='What is the capital of France?' 
-  assistantMessage='The capital of France is Paris.' 
-/>
+**Provide Role and Context**: All necessary information and context for the desired answer should be included. Begin by telling the AI who it should “act” as and what you’re trying to do. For example, “`Act as an expert instructor in [your discipline]. I am creating a syllabus for [course name] …`” This primes the model to give academic-appropriate responses.
 
----
+**Be Specific about the Output**: Clearly state what you want it to produce (a list of topics? a table? bullet points? a certain tone?). The more specific your instructions, the closer the first draft will match your needs. For instance, “`Present the rubric in a table with criteria as rows and performance levels as columns`” will yield a rubric formatted as a table.
 
-**Solve a Logical Problem**
+**Iterate and Refine**: Treat the AI’s response as a draft. You can ask follow-up questions or make requests to refine the material. For example, “`Now add more detail under week 2 and 3 of the outline`” or “`Can you rephrase that objective to be more measurable?`” Leveraging the chat interaction will improve the result in steps.
 
-<Chat 
-  userMessage='Solve this logical puzzle: If all bloops are razzles and all razzles are
-      fizzles, are all bloops fizzles?' 
-  assistantMessage='Yes, all bloops are fizzles. This is a classic example of the transitive
-      property in logic. Here’s how it works: We know that all bloops are
-      razzles. We also know that all razzles are fizzles. If every bloop is a
-      razzle and every razzle is a fizzle, then by transitivity, every bloop
-      must also be a fizzle.' 
-/>
-
----
-
-**Summarize a Paragraph into a Single Sentence**
-
-Prompt: `Summarize the following paragraph into a single sentence: [...]`
-
-Output: “[…]”
-
----
-
-**Rewrite a Paragraph into a Funny Style**
-
-Prompt: `Rewrite the following paragraph in a humorous style: [Insert paragraph here]`
-
-Output: “[…]”
-
----
+**Review and Edit**: Always review the AI’s output yourself. Use your expertise to adjust any content that isn’t accurate or appropriate. Don’t just do exactly what it says – use your expert human judgment to modify or ignore its suggestions. Think of the AI as an assistant generating ideas and text, while you are the final editor ensuring quality and correctness.
