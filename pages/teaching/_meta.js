@@ -2,6 +2,7 @@ export default {
     admin_work: 'Automating administrative work',
     curriculum_design: 'Designing a curriculum',
     lesson_planning: 'Planning lessons',
-    exam_questions: 'Creating and revising exam questions',
+    course_materials: 'Creating course materials',
+    exam_questions: 'Creating exam questions',
     feedback: 'Providing personalized feedback',
 }
