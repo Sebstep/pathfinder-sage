@@ -9,21 +9,21 @@ One fundamental truth underpins this discussion: <mark>AI detectors cannot prove
 Currently, there are three primary approaches used in AI detection:[^Webb2023AIWritingDetectors]
 
 1. **Analyzing Writing Style**: Some detectors analyze stylistic features like perplexity (randomness in the text) and burstiness (variation in perplexity). Typical AI-generated text, such as default ChatGPT outputs, tends to have low perplexity and burstiness, resulting in smooth, predictable writing. However, this method is unreliable and easily defeated by prompting AI to modify its style or through light editing by humans.
-2.	**Machine Learning Classification**: This method involves training a model on large datasets of human-written and AI-generated texts to predict which category a given piece of writing falls into. While some systems, like OpenAI’s detector, have struggled with low accuracy (26% true positives and 9% false positives), others, like Turnitin, claim much higher rates (97% accuracy and 1% false positives). Yet, such promising figures are often based on lab conditions and may not reflect real-world use—especially when students actively modify AI-generated text to avoid detection.
+2.	**Machine Learning Classification**: This method involves training a model on large datasets of human-written and AI-generated texts to predict which category a given piece of writing falls into. While some systems, like OpenAI’s detector,[^OpenAI2023New] have struggled with low accuracy (26% true positives and 9% false positives), others, like Turnitin, claim much higher rates (97% accuracy and 1% false positives). Yet, such promising figures are often based on lab conditions and may not reflect real-world use—especially when students actively modify AI-generated text to avoid detection.
 3.	**Watermarking**: Still experimental, this approach embeds subtle patterns into AI-generated text by controlling word choices according to hidden algorithms. While promising in theory, watermarking faces challenges like ease of removal through paraphrasing and the likelihood of alternative AI tools emerging without watermarking.
 
 ### Lack of Accuracy
 
-AI detection systems are inherently <mark>prone to both false positives and false negatives</mark>.
+AI detection systems are inherently <mark>prone to both false positives and false negatives</mark>.[^Edwards2023Why]
 
-- **False positives** occur when authentic student work is mistakenly flagged as AI-generated. This is particularly problematic because it undermines trust between students and educators and can lead to unwarranted academic penalties. 
-- On the other hand, **false negatives** happen when AI-generated text is undetected, allowing students to bypass scrutiny. 
+- **False positives** occur when authentic student work is mistakenly flagged as AI-generated. This is particularly problematic because it undermines trust between students and educators and can lead to unwarranted academic penalties.[^Fowler2023We] 
+- **False negatives** happen when AI-generated text is undetected, allowing students to bypass scrutiny. 
 
 With AI now integrated into everyday tools like Microsoft Word’s Copilot and Google Workspace, nearly all writing is likely to include some degree of AI assistance. This blurs the line between acceptable support (like grammar correction or summarization) and inappropriate use (like generating entire essays). Detection systems often struggle to account for this complexity, flagging legitimate uses of AI as suspect while missing more sophisticated abuses.
 
 ### Evolving AI Capabilities
 
-AI language models, such as GPT-based systems, are continually improving in generating human-like text. As these models become more sophisticated, their outputs increasingly resemble genuine human writing, making them harder to distinguish. Moreover, students can edit or “humanize” AI-generated content, further blurring the line between machine-produced and original work. Detection systems, which rely on identifying patterns or markers typical of AI output, are often a step behind in adapting to these advances.
+AI language models, such as GPT-based systems, are continually improving in generating human-like text. As these models become more sophisticated, their outputs increasingly resemble genuine human writing, making them harder to distinguish. Moreover, students can edit or “humanize” AI-generated content, further blurring the line between machine-produced and original work.[^Sadasivan2023Can] Detection systems, which rely on identifying patterns or markers typical of AI output, are often a step behind in adapting to these advances.
 
 This rapid progress makes it difficult to stay ahead. While some educators attempt to avoid AI’s influence through in-person exams or tightly controlled assessment environments, such approaches raise logistical issues and limit opportunities for authentic assessment. Likewise, <span mark-color="red">trying to “outrun” AI by designing tasks it cannot complete is becoming increasingly unrealistic</span> due to the speed of AI advancements.
 
@@ -35,7 +35,7 @@ Initial concerns about AI in education have often echoed longstanding anxieties 
 
 ## Alternative Approaches
 
-Instead of focusing on imperfect detection tools, educators can <mark>emphasize teaching students how to responsibly use AI as a collaborative tool</mark> in their learning process. Transparent guidelines on the acceptable use of AI for brainstorming, drafting, or problem-solving can help maintain academic integrity while leveraging the potential of these technologies.
+Instead of focusing on imperfect detection tools, educators can <mark>emphasize teaching students how to responsibly use AI as a collaborative tool</mark> in their learning process.[^MITSloan2023AI] Transparent guidelines on the acceptable use of AI for brainstorming, drafting, or problem-solving can help maintain academic integrity while leveraging the potential of these technologies.
 
 Many educators are now choosing to <mark>embrace and adapt</mark>, creating assessments that incorporate AI in meaningful, ethical ways. **Oral examinations, iterative drafts, and process-based assessments** can help educators evaluate student understanding more effectively than relying solely on AI detection. By designing assignments that focus on the development of ideas, personal reflection, and critical engagement, educators can <mark>create tasks where the value lies in the process as much as the final product</mark>.
 
@@ -49,5 +49,10 @@ Ultimately, moving beyond detection towards thoughtful integration of AI into te
 
 ## References & Footnotes
 
+[^Edwards2023Why]: Edwards, B. (2023, July 14). **Why AI writing detectors don’t work**. *Ars Technica*. https://arstechnica.com/information-technology/2023/07/why-ai-detectors-think-the-us-constitution-was-written-by-ai/
+[^Fowler2023We]: Fowler, G. A. (2023, April 14). **We tested a new ChatGPT-detector for teachers. It flagged an innocent student**. *The Washington Post*. https://www.washingtonpost.com/technology/2023/04/01/chatgpt-cheating-detection-turnitin/
+[^MITSloan2023AI]: MIT Sloan. (2023, August 30). **AI detectors don’t work. Here’s what to do instead**. *MIT Sloan Teaching & Learning Technologies*. https://mitsloanedtech.mit.edu/ai/teach/ai-detectors-dont-work/
+[^OpenAI2023New]: OpenAI. (2023, January 31). **New AI classifier for indicating AI-written text**. *openai.com*. https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/
+[^Sadasivan2023Can]: Sadasivan, V. S., Kumar, A., Balasubramanian, S., Wang, W., & Feizi, S. (2023). **Can AI-Generated Text be Reliably Detected?** *arXiv*. https://doi.org/10.48550/arXiv.2303.11156
 [^Webb2023AIWritingDetectors]: Webb, M. (2023, March 17). **AI writing detectors - concepts and considerations**. https://nationalcentreforai.jiscinvolve.org/wp/2023/03/17/ai-writing-detectors/
 [^Weber-Wulff2023Testing]: Weber-Wulff, D., Anohina-Naumeca, A., Bjelobaba, S., Foltýnek, T., Guerrero-Dib, J., Popoola, O., Šigut, P., & Waddington, L. (2023). **Testing of detection tools for AI-generated text**. *arXiv*. https://doi.org/10.48550/ARXIV.2306.15666
