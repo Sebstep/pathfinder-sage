@@ -50,6 +50,7 @@ export default {
                 }}
             />
             <script src="https://kit.fontawesome.com/6a5bc08ebc.js" crossorigin="anonymous"></script>
+            <link rel="icon" href="/icon.ico" type="image/x-icon" />
         </>
     )
     // ... other theme options
