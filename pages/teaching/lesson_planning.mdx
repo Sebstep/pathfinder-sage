@@ -1,10 +1,77 @@
+import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
+
+
 # Crafting Lecture Notes and Lesson Plans
 
-**How to prompt**: Tell the model about the topic, the duration of the class, and any teaching strategies you want to include. If you want to use particular pedagogical approaches (like case-based learning, discussions, problem-based learning, or other specific theories and practices), include those in your prompt.
+Integrating AI into your lesson planning process can enhance your teaching preparation; saving time, improving clarity, and allowing for greater pedagogical precision. AI tools are especially helpful for designing structured, engaging lesson plans and detailed lecture notes tailored to your teaching goals.
 
-1.	**Prime with pedagogy (optional)**: If you want the lesson plan to incorporate research-based teaching methods (such as retrieval practice, analogies, or active learning), you can prime the model first. For example, one approach is: “`Explain why retrieval practice, elaboration, analogies, and active learning are useful for learning.`” This ensures the AI is aware of these concepts in the conversation (it will summarize them for you). By [giving the model time to think](/prompting/chain-of-thought-prompting), this background step can lead to a lesson plan that naturally uses these techniques.
-2.	**Request the lesson plan**: Now, ask for the plan.
-Example Prompt: “`Act as an expert business education instructor. Design a 90-minute lesson plan for a class on organizational behavior management in a professional context using problem-based learning. Include: a brief introduction, 2-3 main activities or discussions (using active learning), and a conclusion. Ensure you incorporate retrieval practice where suitable.`”.
-The AI should produce a structured lesson plan with timings (e.g., 10 minutes introduction, 20 minutes activity X, etc.) and describe each activity.
-3.	**Refine details**: Review the suggested plan. Maybe it included a discussion but you prefer a small group exercise, or you want to add an example case. You can prompt for changes: “`Replace the think-pair-share activity with a case study example about a dog’s behavior issue, and include guided questions.`” If any content seems off (e.g., an explanation that isn’t quite right), ask for clarification or correction: “`Provide more detail on how to conduct the demonstration mentioned in step 2.`”
-4.	Extract lecture notes or materials: Once the structure is good, you can also use AI to flesh out content for the lecture. For instance: “`Draft a half-page of lecture notes explaining the concept of operant conditioning in animal behavior, to be used in the above lesson.`” The model will generate explanatory text that you might use directly or edit. Another example: “`Give me the key points to highlight when discussing ethical considerations in animal behavior management.`” Use these outputs to enrich your own lecture preparation.
+This guide outlines a systematic approach to using AI for lesson planning, focusing on evidence-based teaching strategies, efficient content generation, and adaptable formats.
+
+## How to Prompt
+
+<Callout type="info">Tell the model about the subject and topic, your audience, the duration of the class, and any pedagogical approaches, teaching strategies, or specific activities you want to include.</Callout>
+
+<Steps>
+
+### Begin with Pedagogical Grounding (Optional, but Recommended)
+
+Before asking AI to create a lesson plan, consider first “priming” it with the teaching methods you’d like it to incorporate. This step isn’t mandatory, but it significantly improves the pedagogical depth of the AI-generated output. 
+
+For instance, if you want to use science-backed strategies like active learning, problem-based learning, retrieval practice, elaboration, or analogies, you can begin the conversation by asking for a summary of these approaches. By [giving the model time to think](/prompting/chain-of-thought-prompting), this background step helps the AI understand what principles to embed in your lesson design. 
+
+**Example Prompt**:
+> Explain why **retrieval practice, elaboration, analogies, and active learning** are useful for learning.
+
+### Generate a Structured Lesson Plan
+
+Once primed (or even if you skip the priming step), your next step is to request a full lesson plan. Provide the following key details to ensure a well-tailored output:
+
+- The subject and specific topic (e.g., organizational behavior management)
+- The duration of the class (e.g., 90 minutes)
+- Activities you want included (e.g., small group work, case study analysis, simulations)
+- Cognitive goals or learning outcomes (e.g., critical thinking, application, synthesis)
+
+Finally [Provide examples to guide the output](/prompting/give_examples/). A good lesson plan should include:
+
+- A brief introduction or framing of the topic
+- 2–3 main activities or teaching blocks, with time estimates
+- Embedded use of retrieval practice, group discussion, or real-world application
+- A conclusion or reflection activity to consolidate learning
+
+The result should be a structured yet adaptable plan that you can immediately use or modify further.
+
+**Example Prompt**:
+
+> You are an experienced university educator specializing in **[your subject area]**. Design a **90-minute** lesson plan for a class on **[insert specific topic]** using **[insert pedagogy, e.g., problem-based learning, active learning]**. The plan should include: a brief introduction, 2–3 main activities or discussions, and a concluding segment to consolidate learning. Use evidence-based strategies such as retrieval practice, elaboration, and analogies where appropriate. Describe the purpose and method for each activity, and provide suggested timings for each section.
+
+### Customize and Refine
+
+The first draft may not be a perfect fit for your context, but that’s the strength of using AI: it’s highly responsive to revision.
+
+You can request adjustments such as:
+
+- Swapping a discussion activity for a case study
+- Adding formative assessment checkpoints or quizzes
+- Including guided questions for group work or Socratic dialogue
+- Introducing a specific example or demonstration relevant to your discipline
+
+This refinement stage ensures your lesson plan reflects your teaching style, student needs, and subject-specific nuances.
+
+**Example Prompt**:
+> Replace the discussion in **activity 2** with a **case study** involving **[describe scenario]**, and include guided questions for students.
+
+### Generate Supporting Materials and Lecture Notes
+
+Once the structure is set, AI can help flesh out the content you’ll deliver. Use it to:
+
+- Draft lecture notes or explanations for key concepts (e.g., “Explain the difference between classical and operant conditioning”)
+- Generate key talking points, diagrams, or analogies
+- Provide short readings or case summaries
+- Create comprehension or reflection questions
+- Design student handouts or slides
+
+**Example Prompt**:
+> Now, provide a half-page lecture note on **[insert concept]**, to support the first activity.
+
+</Steps>
