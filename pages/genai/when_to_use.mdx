@@ -6,23 +6,26 @@ import Link from 'next/link'
 Generative AI, such as language models, can be powerful tools in education, but their use requires thoughtful consideration. Before delegating a task to an AI, ask yourself these four critical questions.
 
 <Steps>
+
 ## What happens if the output is incorrect?
 
-If your task requires absolute accuracy—such as grading exams, diagnosing complex issues, or publishing official materials—AI may not be the safest choice. Language models can produce plausible-sounding but incorrect or misleading outputs, often referred to as *hallucinations* (see [Limitations](/genai/limitations)).
+Before using AI, consider the potential consequences of an incorrect output. If you are using AI to generate an Email to your colleague to request a meeting and the AI sounds too formal or informal given your relationship, that is a minor inconvenience but unlikely to have any meaningful consequences. However, <mark>AI is not a safe choice for high-stakes decision-making</mark> such as evaluating (and possibly failing) students. Language models can produce plausible-sounding but incorrect or misleading outputs, often referred to as *hallucinations* (see [Limitations](/genai/limitations)).
 
-When accuracy is critical, <mark>use AI as part of an *augmented decision-making process* rather than the sole source of information</mark>. For example, ask AI to generate a draft that you can refine and verify.
+Use AI as part of an *augmented decision-making process* to amplify your creativity and productivity, but not as the sole source of information. 
 
 {/* TODO: expand upon algorithmic(-augmented) decision-making */}
 
 ## How will you check the accuracy of the output?
 
-AI is your assistant, not a replacement. <mark>Only use AI for tasks you could solve independently, given enough time</mark>. If you're unfamiliar with the topic, the AI's errors may go unnoticed, potentially misleading your students.
+AI is your assistant, not a replacement. <mark>Only use AI for tasks you could confidently solve independently, given enough time</mark>. For example, AI can quickly generate complex legal documents that seem polished and thorough. But unless you’re trained in law, you might not be able to spot errors or gaps in those documents. Thus, if you're unfamiliar with a topic, the AI's errors may go unnoticed, potentially misleading your students. That’s why it’s important to use AI within the limits of your own knowledge. 
+
+We have written more extensively about how to fact-check AI-generated outputs in the article on [Limitations](/genai/limitations).
 
 ## What data are you sharing with the AI?
 
 Generative AI models are hosted by operators, meaning any data you provide is sent to their servers and may be processed outside your control. Avoid inputting sensitive data such as personal information, student grades, or proprietary materials (unless you have obtained informed consent). 
 
-As a rule of thumb, we recommend that you <mark>put nothing into a prompt that you would not post publicly on your personal social media</mark>. 
+Treat prompts as semi-public. As a rule of thumb, we recommend that you <mark>put nothing into a prompt that you would not post on your personal social media</mark>. While some platforms offer "incognito" modes or data privacy settings, you are still potentially sending confidential information to be processed by a third party. 
 
 If privacy is critical, explore running AI models locally on your computer. Open-source models such as [LLaMA <i className="fa-solid fa-arrow-up-right-from-square"></i>](https://www.llama.com/) can offer privacy, but they require basic programming knowledge and adequate hardware.
 
