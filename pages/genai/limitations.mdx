@@ -1,19 +1,44 @@
+import { Callout } from 'nextra/components'
+
 # Limitations of language models
 
 While generative AI tools like language models can be powerful and versatile, they have significant limitations that users must understand to use them effectively. Below are key constraints, with detailed explanations and examples.
 
-## Knowledge limit
+<Callout type="warning">This article focuses on hallucinations and biases. If you are interested in the dangers related to **sharing sensible data in your prompts** and **potential copyright infringements**, check our the section on [when to use generative AI](/genai/when_to_use).</Callout>
 
-Language models are trained on datasets containing information up to a specific cut-off date. This means they lack awareness of events, discoveries, or developments that occurred after that date.[^1]
+## Hallucinations
+
+Language models are trained on datasets containing information up to a specific cut-off date. This means they lack awareness of events, discoveries, or developments that occurred after that date.[^Martino2023Knowledge]
 
 - **Good Fit**: Asking about the historical significance of the Renaissance or the basics of quantum mechanics. These topics are well within the training data.
 - **Limitation**: Asking for insights on the latest research paper published this month or for predictions about ongoing political events. The model won’t have this information unless you include it in the prompt.
 
-<mark>For tasks requiring up-to-date information, you must provide the latest context within your query</mark> (e.g., current events, recent technology updates, or new legal policies). The model cannot spontaneously update itself with new knowledge.
+<mark>For tasks requiring up-to-date information, you must provide the latest context within your query</mark> (e.g., current events, recent technology updates, or new legal policies). The model cannot spontaneously update itself with new knowledge. Otherwise, a large language model may generate outdated or irrelevant information, so-called hallucinations.
+
+Language models may confidently present false information, especially for queries beyond their knowledge boundary. This phenomenon occurs when the model generates plausible-sounding but incorrect or misleading answers.[^Huang2024Survey] [^Raunak2021Curious]
+
+- **Example**: If you ask a language model about the health benefits of a fictional fruit, it may provide a detailed response based on its general knowledge of fruits, even though the fruit doesn’t exist.
+- **Mitigation**: When using language models, be cautious with answers that seem too specific or detailed, especially in niche or fictional contexts. Cross-check the information with reliable sources to verify its accuracy.
+
+You should always <mark>critically evaluate the outputs</mark>, especially when the AI is used for research, teaching, or publishing. If the answer seems implausible or too specific, it’s wise to verify it independently.
+
+### Reducing the likelihood of hallucinations
+
+To mitigate hallucinations, you can provide additional context or constraints in your prompt to guide the model towards more accurate responses. Furthermore, you can use techniques like [chain-of-thought prompting](/prompting/chain_of_thought_prompting) to encourage the AI to explain its reasoning step-by-step.[^Ji2023Towards] 
+
+However, no technique can guarantee that the model will always produce accurate information. Therefore, it’s crucial to verify the AI's output against reliable sources, especially when dealing with factual claims or sensitive topics.
+
+### Fact-checking AI-generated outputs
+
+Fact-checking the final output is necessary. If the case study includes any factual claims (data points, historical events, names of laws, etc.), verify each one from a reliable source. For example, if the AI narrative says “Carbon emissions in 2020 were X metric tons” or “Study Y found Z”, double-check those facts. 
+
+If the AI did not provide sources, you can do a quick web search yourself or use your subject matter expertise to validate the information. A good practice is to prompt the AI to provide sources for factual claims and then check those sources. If the AI can’t provide a source, treat the information with skepticism. However, <mark>don’t take AI-generated references at face value – always confirm</mark>.[^Welborn2023ChatGPT] In one notorious incident, lawyers using ChatGPT got in trouble because the AI fabricated legal case citations that looked real.[^Merken2023New] Examine the provided sources to ensure they are legitimate and that the AI correctly summarized them. If you’re not sure about a fact and can’t verify it, it’s safest to remove it or replace it with a more general statement.
+
+Ensuring accuracy is crucial not only to avoid misleading students but also to maintain your credibility as an instructor.
 
 ## Biased training data
 
-Language models are trained on vast datasets sourced from the internet, books, and other materials. These datasets inevitably reflect the biases present in their sources. As a result, <mark>the model's outputs can unintentionally reinforce stereotypes</mark>, cultural biases, or inaccuracies.[^2]
+Language models are trained on vast datasets sourced from the internet, books, and other materials. These datasets inevitably reflect the subtle (or not so subtle) biases present in their sources. As a result, <mark>the model's outputs can unintentionally reinforce stereotypes</mark>, cultural biases, or inaccuracies.[^Ntoutsi2020Bias]
 
 **Examples**
 
@@ -23,26 +48,22 @@ Language models are trained on vast datasets sourced from the internet, books, a
 
 AI can inadvertently perpetuate harm when biased outputs are used uncritically. It's essential for users to review and contextualize the responses, especially in sensitive or high-stakes scenarios.
 
-## Hallucinations
+### Check for biases in AI-generated outputs
 
-Language models may confidently present false information, especially for queries beyond their knowledge boundary. This phenomenon, known as hallucination, occurs when the model generates plausible-sounding but incorrect or misleading answers.[^3] [^4]
-
-- **Example**: If you ask a language model about the health benefits of a fictional fruit, it may provide a detailed response based on its general knowledge of fruits, even though the fruit doesn’t exist.
-- **Mitigation**: When using language models, be cautious with answers that seem too specific or detailed, especially in niche or fictional contexts. Cross-check the information with reliable sources to verify its accuracy.
-
-You should always <mark>critically evaluate the outputs</mark>, especially when the AI is used for research, teaching, or publishing. If the answer seems implausible or too specific, it’s wise to verify it independently.
-
-To mitigate hallucinations, you can provide additional context or constraints in your prompt to guide the model towards more accurate responses. Furthermore, you can use techniques like [chain-of-thought prompting](/prompting/chain_of_thought_prompting) to encourage the AI to explain its reasoning step-by-step.[^5]
+Read the output with an eye for any unintended bias or stereotype. Ensure that the output portrays individuals and groups respectfully. For example, if the AI made all scientists in the story male by default, you might choose to change some names or descriptions to be more inclusive. Check for any language that might be insensitive or triggering for your students. It’s wise to diversify names, contexts, and examples in your cases deliberately. If your output touches on a cultural or social issue, be extra cautious and perhaps have a colleague review it as well to ensure it’s presented in a balanced way or with appropriate sensitivity.
 
 ## References & Footnotes
 
-[^1]: Martino, A., Iannelli, M., & Truong, C. (2023). **Knowledge injection to counter large language model (LLM) hallucination**. In C. Pesquita, H. Skaf-Molli, V. Efthymiou, S. Kirrane, A. Ngonga, D. Collarana, R. Cerqueira, M. Alam, C. Trojahn, & S. Hertling (Eds.), *The Semantic Web: ESWC 2023 Satellite Events* (Vol. 13998, pp. 182–185). Springer Nature Switzerland. https://doi.org/10.1007/978-3-031-43458-7_34
+[^Martino2023Knowledge]: Martino, A., Iannelli, M., & Truong, C. (2023). **Knowledge injection to counter large language model (LLM) hallucination**. In C. Pesquita, H. Skaf-Molli, V. Efthymiou, S. Kirrane, A. Ngonga, D. Collarana, R. Cerqueira, M. Alam, C. Trojahn, & S. Hertling (Eds.), *The Semantic Web: ESWC 2023 Satellite Events* (Vol. 13998, pp. 182–185). Springer Nature Switzerland. https://doi.org/10.1007/978-3-031-43458-7_34
 
-[^2]: Ntoutsi, E., Fafalios, P., Gadiraju, U., Iosifidis, V., Nejdl, W., Vidal, M., Ruggieri, S., Turini, F., Papadopoulos, S., Krasanakis, E., Kompatsiaris, I., Kinder‐Kurlanda, K., Wagner, C., Karimi, F., Fernandez, M., Alani, H., Berendt, B., Kruegel, T., Heinze, C., … Staab, S. (2020). **Bias in data‐driven artificial intelligence systems—an introductory survey**. *WIREs Data Mining and Knowledge Discovery*, *10*(3), e1356. https://doi.org/10.1002/widm.1356
+[^Merken2023New]: Merken, S. (2023, June 26). **New York lawyers sanctioned for using fake ChatGPT cases in legal brief**. Reuters. https://www.reuters.com/legal/new-york-lawyers-sanctioned-using-fake-chatgpt-cases-legal-brief-2023-06-22/
+
+[^Ntoutsi2020Bias]: Ntoutsi, E., Fafalios, P., Gadiraju, U., Iosifidis, V., Nejdl, W., Vidal, M., Ruggieri, S., Turini, F., Papadopoulos, S., Krasanakis, E., Kompatsiaris, I., Kinder‐Kurlanda, K., Wagner, C., Karimi, F., Fernandez, M., Alani, H., Berendt, B., Kruegel, T., Heinze, C., … Staab, S. (2020). **Bias in data‐driven artificial intelligence systems—an introductory survey**. *WIREs Data Mining and Knowledge Discovery*, *10*(3), e1356. https://doi.org/10.1002/widm.1356
     
-[^3]: Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z., Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B., & Liu, T. (2024). **A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions**. *ACM Transactions on Information Systems*, 3703155. https://doi.org/10.1145/3703155
+[^Huang2024Survey]: Huang, L., Yu, W., Ma, W., Zhong, W., Feng, Z., Wang, H., Chen, Q., Peng, W., Feng, X., Qin, B., & Liu, T. (2024). **A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions**. *ACM Transactions on Information Systems*, 3703155. https://doi.org/10.1145/3703155
 
-[^4]: Raunak, V., Menezes, A., & Junczys-Dowmunt, M. (2021). **The curious case of hallucinations in neural machine translation**. *Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies*, 1172–1183. https://doi.org/10.18653/v1/2021.naacl-main.92
+[^Raunak2021Curious]: Raunak, V., Menezes, A., & Junczys-Dowmunt, M. (2021). **The curious case of hallucinations in neural machine translation**. *Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies*, 1172–1183. https://doi.org/10.18653/v1/2021.naacl-main.92
 
+[^Ji2023Towards]: Ji, Z., Yu, T., Xu, Y., Lee, N., Ishii, E., & Fung, P. (2023). **Towards mitigating LLM hallucination via self reflection**. *Findings of the Association for Computational Linguistics: EMNLP 2023*, 1827–1843. https://doi.org/10.18653/v1/2023.findings-emnlp.123
 
-[^5]: Ji, Z., Yu, T., Xu, Y., Lee, N., Ishii, E., & Fung, P. (2023). **Towards mitigating LLM hallucination via self reflection**. *Findings of the Association for Computational Linguistics: EMNLP 2023*, 1827–1843. https://doi.org/10.18653/v1/2023.findings-emnlp.123
+[^Welborn2023ChatGPT]: Welborn, A. (2023, March 9). **ChatGPT and Fake Citations**. *Duke University Libraries Blogs*. https://blogs.library.duke.edu/blog/2023/03/09/chatgpt-and-fake-citations
