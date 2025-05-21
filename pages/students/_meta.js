@@ -1,5 +1,6 @@
 export default {
     exams: 'Learning assessment',
+    rubrics: 'Creating rubrics',
     assignments: {
         title: 'Create engaging tasks & assignments',
         display: 'hidden',
