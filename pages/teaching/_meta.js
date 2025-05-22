@@ -7,6 +7,7 @@ export default {
     lesson_planning: 'Planning lessons',
     course_materials: 'Creating course materials',
     exam_questions: 'Creating exam questions',
+    rubrics: 'Creating rubrics',
     feedback: {
         title: 'Providing personalized feedback',
         display: 'hidden',
