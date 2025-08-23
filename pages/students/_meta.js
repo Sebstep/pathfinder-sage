@@ -1,12 +1,11 @@
 export default {
     exams: 'Learning assessment',
-    assignments: {
-        title: 'Create engaging tasks & assignments',
-        display: 'hidden',
-    },
-    tutor: {
+    tutoring: {
         title: 'Using AI as a tutor',
         display: 'hidden',
+    },
+    simulations: {
+        title: 'Simulations',
     },
     promptathon: {
         title: 'Conduct a promptathon',
