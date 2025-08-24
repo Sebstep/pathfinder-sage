@@ -4,18 +4,16 @@ import { Callout } from 'nextra/components'
 
 While generative AI tools like language models can be powerful and versatile, they have significant limitations that users must understand to use them effectively. Below are key constraints, with detailed explanations and examples.
 
-<Callout type="warning">This article focuses on hallucinations and biases. If you are interested in the possible pitfalls related to **sharing sensible data in your prompts** and **potential copyright infringement**, check our the section on [when to use generative AI](/genai/when_to_use).</Callout>
+<Callout type="warning">This article focuses on hallucinations and biases. If you are interested in the possible pitfalls related to **sharing sensible data in your prompts** and **potential copyright infringement**, check out the section on [when to use generative AI](/genai/when_to_use).</Callout>
 
 ## Hallucinations
 
 Language models are trained on datasets containing information up to a specific cut-off date. This means they lack awareness of events, discoveries, or developments that occurred after that date.[^Martino2023Knowledge]
 
-- **Good Fit**: Asking about the historical significance of the Renaissance or the basics of quantum mechanics. These topics are well within the training data.
-- **Limitation**: Asking for insights on the latest research paper published this month or for predictions about ongoing political events. The model won’t have this information unless you include it in the prompt.
+- **Good Use Case**: Asking about the historical significance of the Renaissance or the basics of quantum mechanics. These topics are well within the training data.
+- **Inappropriate Use Case**: Asking for insights on the latest research paper published this month or for predictions about ongoing political events. The model won’t have this information unless you include it in the prompt.
 
-<mark>For tasks requiring up-to-date information, you must provide the latest context within your query</mark> (e.g., current events, recent technology updates, or new legal policies). The model cannot spontaneously update itself with new knowledge. Otherwise, a large language model may generate outdated or irrelevant information, so-called hallucinations.
-
-Language models may confidently present false information, especially for queries beyond their knowledge boundary. This phenomenon occurs when the model generates plausible-sounding but incorrect or misleading answers.[^Huang2024Survey] [^Raunak2021Curious]
+<mark>For tasks requiring up-to-date information, it is essential to provide the latest context within your query</mark> (e.g., current events, recent technology updates, or new legal policies). While some AI models can access the internet to retrieve real-time updates, this capability varies across platforms and may not always be reliable. Importantly, a language model’s underlying knowledge base does not update automatically. Without additional context, the model may generate outdated or inaccurate information, a phenomenon often referred to as *hallucination*. In such cases, the model produces answers that sound confident and plausible but are factually incorrect or misleading.[^Huang2024Survey] [^Raunak2021Curious]
 
 - **Example**: If you ask a language model about the health benefits of a fictional fruit, it may provide a detailed response based on its general knowledge of fruits, even though the fruit doesn’t exist.
 - **Mitigation**: When using language models, be cautious with answers that seem too specific or detailed, especially in niche or fictional contexts. Cross-check the information with reliable sources to verify its accuracy.

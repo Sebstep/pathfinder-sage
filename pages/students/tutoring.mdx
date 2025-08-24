@@ -1,17 +1,113 @@
 import { Callout } from 'nextra/components'
+import { Steps } from 'nextra/components'
 
-# Using AI as a Tutor
+# Using AI Chatbots as Personalized Tutors
 
-<Callout emoji="️🚧">
-  Content coming soon…
-</Callout>
+Imagine each of your students having a personal tutor available anytime they need help – a tutor that can answer questions at 2 AM, explain complex concepts step-by-step, and even speak in the student’s native language. This guide will show you how to leverage these AI tutors across disciplines, focusing on practical examples you can try in your teaching.
+
+## Benefits of an AI-Powered Tutor for Students
+
+### 24/7 Personalized Support
+
+LLM-based chatbots can provide instant academic assistance at any time, far beyond your office hours or class time. Students gain access to continuous, responsive support beyond traditional classroom hours, bridging the gap left by limited instructor availability. 
+
+The AI tutor is infinitely patient and can adapt explanations on the fly. In fact, modern LLMs are capable of tailoring their guidance to each student’s pace, questions, and learning style, providing individualized feedback and explanations. Over time, the chatbot “learns” from the student’s queries and mistakes, dynamically adjusting its teaching approach.
+
+### Accessible and Inclusive Learning
+
+LLM-based tutors can also make learning more accessible to diverse students. Because they interact in natural language, these chatbots lower barriers for students who might be hesitant to seek help. Moreover, the technology’s flexibility enables multiple modes of learning: the chatbot can deliver explanations in writing, or even through voice if integrated with text-to-speech, which helps students with visual impairment or reading difficulties. They can also simplify or summarize complex text, adjust the depth of explanation, and repeat information as needed. 
+
+Crucially, LLMs are multilingual by nature. A chatbot can instantly translate content or switch to another language, allowing students to learn in their preferred language or clarify doubts in their mother tongue. By providing real-time translation and multilingual tutoring, the AI ensures that non-native speakers fully grasp the material. The chatbot can even localize examples or use culturally relevant contexts to make learning more relatable. 
+
+Additionally, AI tutors are adept at supporting different learning needs. They can present information in multiple formats, like offering a diagram or code snippet when a visual aid is helpful, or a simplified summary for a student who struggles with dense text. Because the AI adapts its tone and pacing based on the learner’s feedback, it can accommodate students with learning disabilities or attention challenges by breaking content into manageable chunks and responding to questions as they arise. 
+
+### Enhanced Learning Outcomes
+
+The ultimate benefit of using AI chatbots as tutors is improved learning and academic performance. Because students get timely, personalized help and can learn at their own pace, they tend to understand the material more deeply. The immediate feedback loop – where a student attempts a problem, gets instant hints or corrections from the AI, and tries again – reinforces understanding through practice. 
+
+Students can also use the AI tutor to test themselves (for example, by asking the chatbot to quiz them or simulate exam questions), which promotes active recall and self-assessment. In addition, AI tutors can help students develop broader skills: not just subject content, but also skills like critical thinking and problem-solving. By guiding students through solutions with Socratic questioning or offering alternative approaches to a problem, the chatbot encourages students to think through the “why” and “how” of their answers.
+
+## Getting Started: Setting Up Your AI Tutor
+
+<Steps>
+
+### Choose a Suitable Chatbot Platform: 
+
+To create an AI tutor for your students, first pick a chatbot platform that is readily available to you and your class. Ensure that the chosen chatbot is easily accessible (via web or an app) and that it supports the language(s) you need. Also consider [privacy and compliance](/genai/when_to_use/); if needed, check whether the platform is approved for educational use by your institution. Once you’ve selected a platform, familiarize yourself with its interface and capabilities. 
+
+### Define the Tutor’s Role and Scope
+
+To create a good AI tutor requires [good prompting skills](/prompting/). Set the stage by giving the chatbot a role or persona. For instance, you might start the chat by saying: 
+
+> You are a friendly and knowledgeable tutor for my Introduction to Biology course. You will explain concepts in simple terms, give examples, and ask me questions to check my understanding. If I get something wrong, guide me to the right answer step-by-step. 
+
+Adjust the prompt to fit your discipline and the level of your students. The goal is to have the AI adopt a pedagogical style: it should not just give answers away, but rather engage the student in learning (e.g. through hints or dialogue). 
+
+Share these guidelines with your students as well, so they know how to prompt the AI tutor effectively. Encourage them to start questions with context (e.g. “I’m studying X, I don’t understand Y…”), and to specify if they want a particular style of answer (a summary, an analogy, a detailed proof, etc.). Emphasize that this AI is a supplementary tutor meant to help them learn – not a cheat sheet to do their assignments for them.
+
+To get you started, we have created a [sample prompt](#example-prompt-general-tutor) for you to experiment with below.
+
+### Supply It with Course Material
+
+To enhance the AI tutor’s effectiveness, provide it with relevant course materials. While LLMs have broad knowledge, they may not be familiar with your specific syllabus or textbook. You can share key documents (like lecture notes, reading lists, or problem sets) by uploading them if the platform allows, or by pasting excerpts into the chat. This gives the AI context to tailor its responses to your course content. 
+
+For example, you might upload a PDF of your lecture slides or copy-paste a section of your textbook that students often struggle with. The AI can then reference this material when answering questions, making its help more accurate and aligned with your teaching. This might include common misconceptions, important formulas, or definitions specific to your course. By equipping the AI tutor with these resources, you ensure it provides relevant and precise assistance.
+
+### Pilot It Yourself
+
+Before unleashing the AI tutor to your whole class, try it out yourself with a few example tasks from your course. Pose typical student questions to the chatbot and see what kind of responses it gives. Does it explain clearly and accurately? Does it show all steps in a solution? If the answer is too short or too advanced, you can refine your prompting instructions (for example, ask it to be more detailed or to simplify its language). It’s a good idea to also test some edge cases like incorrect, naive, or even offensive questions to see how the bot handles them; ideally, it should correct misconceptions gently.  
+
+### Introduce it to Your Students
+
+Now you can roll it out to the class. Explain to your students why you’re incorporating an AI tutor; emphasize that it’s to enhance their learning through personalized help and practice. Provide them with access instructions (e.g. the URL or app to use, any login if required) and any recommended conversation guidelines. 
+
+It can be useful to do a live demo in class, which helps set expectations for how to interact with the AI. Encourage students to start using the chatbot for study tasks, like reviewing lecture notes (“ask the AI to summarize last lecture’s key points”) or solving a simple problem to see the solution approach. 
+
+### Encourage Regular Use and Gather Feedback
+
+Urge students to incorporate the AI tutor into their study routine. You might assign a low-stakes homework where interacting with the AI is part of the task (e.g. “Use the chatbot to quiz you on Chapter 3, and then write a reflection on what you learned”). 
+
+Be sure to gather feedback: ask students if the AI explanations are clear, if they encountered any frustrating answers, or if there’s something the AI couldn’t help with. For example, if students report that the chatbot often gives answers that are too advanced, you might advise them to explicitly prompt it to be more basic (“Explain like I’m new to this”). On the other hand, if students are not challenging the AI enough (just using it as a quick answer lookup), you could model how to use it more interactively (“ask why the solution works, not just what it is”). By iterating like this, you’ll fine-tune the human-AI partnership in your classroom.
+
+</Steps>
+
+## Adapting the AI Tutor to Different Subjects
+
+One of the great advantages of LLM-based tutors is that they are cross-disciplinary; the same AI can help in virtually any subject, as it has been trained on a vast range of topics. Below are some concrete examples of how you and your students can use an AI chatbot tutor in different disciplines. Feel free to try these scenarios or adapt them to your coursework:
+
+### Science & Engineering
+
+Students in STEM fields can use the AI tutor to break down complex problems. For example, a physics student might ask, “How do I approach this thermodynamics problem about entropy step by step?” The chatbot can guide them through the solution, prompting at each step (e.g. “First, what formulas relate to entropy change?”). In coding or engineering, a student could paste an error message or a snippet of code and ask the AI for debugging help. The AI might not always have the exact solution, but it can suggest likely causes or ask guiding questions. Another use case: lab report prep. A biology student could say, “Explain what the results of this experiment mean,” and the AI can help interpret data or suggest analogies (turning a dry result into a more intuitive explanation). By iteratively questioning the AI, students learn problem-solving strategies. Tip: Encourage STEM students to have the AI simulate a study buddy: e.g. “Quiz me on the key formulas in this chapter” or “Give me a real-world example of this concept”. This active use helps solidify their grasp of the material.
+
+### Humanities & Social Sciences
+
+
+In subjects like literature, history, or philosophy, an AI chatbot can serve as a discussion partner or a source of diverse perspectives. For instance, a literature student can prompt, “Let’s analyze the theme of justice in To Kill a Mockingbird. What are some key points I should consider?” The chatbot can outline major themes, symbols, or character viewpoints, helping the student develop their own interpretation with a solid factual base. Students can also engage the AI in role-play dialogues: a history student might say, “Pretend you are a witness to the signing of the Declaration of Independence – describe the atmosphere and significance”. The chatbot, drawing on historical data, can create a vivid narrative, which makes the learning experience more immersive. In political science or sociology, you could use the AI to explore case studies or ethical dilemmas by asking it to argue from different perspectives (e.g., “What might be the pro and con arguments about policy X from a libertarian perspective?”). This helps students practice critical thinking and see multiple sides of an issue. Tip: Remind students that for essay writing, the AI should be used to brainstorm ideas or get feedback on drafts, not to write the essay for them. For example, they might paste a paragraph of their essay and ask, “Can you critique this argument and suggest how to strengthen it?” The AI might point out unclear reasoning or missed evidence, which the student can then improve upon.
+
+### Mathematics
+
+Math students often benefit from seeing each step of a solution. An AI tutor can serve as a step-by-step solution guide. A student struggling with calculus might ask, “How do I integrate $\int x^2 e^x dx$? Please show each step.” The chatbot will typically apply integration by parts, explaining each step in words and calculations. If a step confuses the student, they can ask a follow-up like “Why did you choose $u = x^2$ in that step?” – and the AI can clarify its reasoning. This interactive dialogue can demystify complex procedures. Additionally, the AI can generate practice problems: “Give me 3 practice problems involving integrals of a product of polynomials and exponentials, and then provide the solutions.” This allows students to test themselves and then check their work against the AI’s answers. In statistics, a student could input a data set and ask the AI to perform an analysis or explain what a certain result (like a p-value) means in context. Tip: Mathematics has absolute right and wrong answers, so it’s important that students verify the AI’s solutions. Encourage them to use the AI as a solution checker – for example, they can work out a problem themselves, then ask the chatbot “Is this solution correct? If not, where did I go wrong?” This approach uses the AI for confirmation and error analysis, which can build the student’s confidence in problem-solving.
+
+### Foreign Languages
+
+AI chatbots are excellent language practice partners. For language learners, an LLM tutor can conduct a conversation in the target language, correct mistakes, and even explain grammar or vocabulary in the student’s native language when needed. A student learning Spanish might prompt the AI in Spanish with a question about their day or a topic of interest, and the AI will respond in Spanish, keeping the conversation flowing. If the student is unsure about something, they can ask in English, “How do I say [phrase] in Spanish, and what does it literally translate to?” The AI can provide the translation and explanation, then seamlessly continue the dialogue in Spanish. This allows for immersive practice without the pressure of a human partner. The AI can also help with written language skills: a student can write a paragraph in French and ask the AI to check it. The chatbot can highlight errors and suggest corrections, often with explanations (e.g. gender agreement or tense usage). Since the AI can adapt to any proficiency level, students can use it whether they are beginners forming simple sentences or advanced learners debating a complex topic. Tip: Suggest to students that they try creative interactions, like “Tell me a story in German about a trip to the marketplace” or “Help me practice restaurant dialogues in Italian.” The novelty keeps practice engaging, and the always-available nature means they can practice speaking or writing at any time.
+
+## Example Prompt: General Tutor
+
+
 
 {/* TODO: Using AI to ask questions (instead of giving answers) */}
 
-```
+
+
+<Callout>
 You are a supportive encouraging tutor who helps students understand concepts by explaining ideas and asking students questions. Start by introducing yourself to the student as their AI-Tutor who is happy to help them with any questions.
+
 Only ask one question at a time. First, ask them what they would like to learn about. Wait for the response. Then ask them about their learning level: Are you beginner or advanced in the topic? Wait for their response. Then ask them what they know already about the topic they have chosen.
+
 You should guide students in an open-ended way. Do not provide immediate answers or solutions to problems but help students generate their own answers by asking leading questions. Ask students to explain their thinking.
+
 If the student is struggling or gets the answer wrong, try asking them to do part of the task or remind the student of their goal and give them a hint. If students improve, then praise them and show excitement. If the student struggles, then be encouraging and give them some ideas to think about.
+
 When pushing students for information, try to end your responses with a question so that students have to keep generating ideas. Once a student shows an appropriate level of understanding given their learning level, ask them to explain the concept in their own words; this is the best way to show you know something, or ask them for examples.
-```
+</Callout>
