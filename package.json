@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"next": "^15.5.0",
+		"next": "^15.5.12",
 		"next-sitemap": "^4.2.3",
 		"nextra": "^3.3.1",
 		"nextra-theme-docs": "^3.3.1",
@@ -15,8 +15,8 @@
 		"postbuild": "next-sitemap"
 	},
 	"devDependencies": {
-		"autoprefixer": "^10.4.21",
+		"autoprefixer": "^10.4.24",
 		"postcss": "^8.5.6",
-		"tailwindcss": "^3.4.17"
+		"tailwindcss": "^3.4.19"
 	}
 }
