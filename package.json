@@ -1,11 +1,11 @@
 {
 	"dependencies": {
-		"next": "^15.5.12",
+		"next": "^16.1.6",
 		"next-sitemap": "^4.2.3",
-		"nextra": "^3.3.1",
-		"nextra-theme-docs": "^3.3.1",
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1",
+		"nextra": "^4.6.1",
+		"nextra-theme-docs": "^4.6.1",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
 		"react-icons": "^5.5.0"
 	},
 	"scripts": {
@@ -15,8 +15,8 @@
 		"postbuild": "next-sitemap"
 	},
 	"devDependencies": {
-		"autoprefixer": "^10.4.24",
+		"@tailwindcss/postcss": "^4.1.18",
 		"postcss": "^8.5.6",
-		"tailwindcss": "^3.4.19"
+		"tailwindcss": "^4.1.18"
 	}
 }

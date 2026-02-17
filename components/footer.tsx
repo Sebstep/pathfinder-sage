@@ -5,7 +5,7 @@ import Image from 'next/image'
 function FooterLogo() {
     return (
         <div className="text-lg font-extrabold">
-            <span className="text-eu-blue">Erasmus+ Pathfinder</span>
+            <span style={{ color: '#004494' }}>Erasmus+ Pathfinder</span>
         </div>
     )
 }
