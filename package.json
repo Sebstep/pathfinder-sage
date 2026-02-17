@@ -9,10 +9,13 @@
 		"react-icons": "^5.5.0"
 	},
 	"scripts": {
-		"dev": "next",
-		"build": "next build",
-		"start": "next start",
+		"dev": "NODE_OPTIONS=\"${NODE_OPTIONS:+$NODE_OPTIONS }--localstorage-file=.next/localstorage\" next",
+		"build": "NODE_OPTIONS=\"${NODE_OPTIONS:+$NODE_OPTIONS }--localstorage-file=.next/localstorage\" next build",
+		"start": "NODE_OPTIONS=\"${NODE_OPTIONS:+$NODE_OPTIONS }--localstorage-file=.next/localstorage\" next start",
 		"postbuild": "next-sitemap"
+	},
+	"engines": {
+		"node": ">=22 <25"
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.1.18",

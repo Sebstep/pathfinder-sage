@@ -76,3 +76,45 @@ Once the structure is set, AI can help flesh out the content you’ll deliver. U
 > Now, provide a half-page lecture note on **[insert concept]**, to support the first activity.
 
 </Steps>
+
+
+## Example: Workshop Planning Prompt
+
+This prompt template works well when you need a time-boxed workshop plan with interactive activities and a clear, scannable schedule.
+
+```md copy
+You are an instructional designer supporting a university teaching and learning center.
+
+<workshop_context>
+Audience: 20 new teaching assistants (mixed disciplines)
+Duration: 2 hours
+Goal: Help TAs run engaging seminars that promote participation and comprehension.
+</workshop_context>
+
+<topics>
+- Active learning (think-pair-share, cold calling, small-group work)
+- Retrieval practice (low-stakes quizzing, exit tickets)
+- Inclusive facilitation (psychological safety, equitable participation)
+- Handling common issues (silence, dominant voices, off-topic discussions)
+</topics>
+
+<constraints>
+- Include at least 2 interactive elements that participants experience as learners.
+- Include 1 short break.
+- Balance theory (why) with practice (how) and concrete scripts.
+- Use plain language and avoid discipline-specific jargon.
+</constraints>
+
+<output_format>
+Return a schedule within <workshop_plan> tags. Use this format:
+
+<workshop_plan>
+1. [Segment Name] - [Duration] ([Cumulative Time])
+   Purpose:
+   Facilitator notes:
+   Materials:
+</workshop_plan>
+
+Include total cumulative time at the end of each segment and ensure the plan fits within 2 hours.
+</output_format>
+```
