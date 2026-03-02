@@ -9,16 +9,19 @@
 		"react-icons": "^5.5.0"
 	},
 	"scripts": {
-		"dev": "NODE_OPTIONS=\"${NODE_OPTIONS:+$NODE_OPTIONS }--localstorage-file=.next/localstorage\" next",
+		"ensure:search-index": "if [ ! -f public/_pagefind/pagefind.js ]; then if [ -f .next/server/app/index.html ]; then pnpm run build:search-index; else pnpm build; fi; fi",
+		"dev": "pnpm run ensure:search-index && NODE_OPTIONS=\"${NODE_OPTIONS:+$NODE_OPTIONS }--localstorage-file=.next/localstorage\" next",
 		"build": "NODE_OPTIONS=\"${NODE_OPTIONS:+$NODE_OPTIONS }--localstorage-file=.next/localstorage\" next build",
 		"start": "NODE_OPTIONS=\"${NODE_OPTIONS:+$NODE_OPTIONS }--localstorage-file=.next/localstorage\" next start",
-		"postbuild": "next-sitemap"
+		"build:search-index": "rm -rf public/_pagefind public/fragment public/index public/pagefind* public/wasm.*.pagefind && pagefind --site .next/server/app --output-path public/_pagefind --root-selector \"[data-pagefind-body]\"",
+		"postbuild": "next-sitemap && pnpm run build:search-index"
 	},
 	"engines": {
 		"node": ">=22 <25"
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.1.18",
+		"pagefind": "^1.4.0",
 		"postcss": "^8.5.6",
 		"tailwindcss": "^4.1.18"
 	}
