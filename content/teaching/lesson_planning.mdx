@@ -7,7 +7,7 @@ import { Steps } from 'nextra/components'
 
 Integrating AI into your lesson planning process can enhance your teaching preparation; saving time, improving clarity, and allowing for greater pedagogical precision. AI tools are especially helpful for designing structured, engaging lesson plans and detailed lecture notes tailored to your teaching goals.
 
-This guide outlines a systematic approach to using AI for lesson planning, focusing on evidence-based teaching strategies, efficient content generation, and adaptable formats.
+This guide outlines a systematic approach to using AI for lesson planning, focusing on evidence-based teaching strategies, efficient content generation, and adaptable formats.[^Dunlosky2013LearningTechniques] [^Freeman2014ActiveLearning] [^RoedigerKarpicke2006TestingEffect]
 
 ## How to Prompt
 
@@ -19,7 +19,7 @@ This guide outlines a systematic approach to using AI for lesson planning, focus
 
 Before asking AI to create a lesson plan, consider first “priming” it with the teaching methods you’d like it to incorporate. This step isn’t mandatory, but it significantly improves the pedagogical depth of the AI-generated output. 
 
-For instance, if you want to use science-backed strategies like active learning, problem-based learning, retrieval practice, elaboration, or analogies, you can begin the conversation by asking for a summary of these approaches. By [giving the model time to think](/prompting/chain-of-thought-prompting), this background step helps the AI understand what principles to embed in your lesson design. 
+For instance, if you want to use science-backed strategies like active learning, problem-based learning, retrieval practice, elaboration, or analogies, you can begin the conversation by asking for a summary of these approaches.[^Dunlosky2013LearningTechniques] [^Freeman2014ActiveLearning] [^RoedigerKarpicke2006TestingEffect] By [giving the model time to think](/prompting/chain-of-thought-prompting), this background step helps the AI understand what principles to embed in your lesson design. 
 
 **Example Prompt**:
 > Explain why **retrieval practice, elaboration, analogies, and active learning** are useful for learning.
@@ -118,3 +118,11 @@ Return a schedule within <workshop_plan> tags. Use this format:
 Include total cumulative time at the end of each segment and ensure the plan fits within 2 hours.
 </output_format>
 ```
+
+## References & Footnotes
+
+[^Dunlosky2013LearningTechniques]: Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013). **Improving students’ learning with effective learning techniques: promising directions from cognitive and educational psychology**. *Psychological Science in the Public Interest*, *14*(1), 4–58. https://doi.org/10.1177/1529100612453266
+
+[^Freeman2014ActiveLearning]: Freeman, S., Eddy, S. L., McDonough, M., Smith, M. K., Okoroafor, N., Jordt, H., & Wenderoth, M. P. (2014). **Active learning increases student performance in science, engineering, and mathematics**. *Proceedings of the National Academy of Sciences*, *111*(23), 8410–8415. https://doi.org/10.1073/pnas.1319030111
+
+[^RoedigerKarpicke2006TestingEffect]: Roediger, H. L., III, & Karpicke, J. D. (2006). **Test-enhanced learning: taking memory tests improves long-term retention**. *Psychological Science*, *17*(3), 249–255. https://doi.org/10.1111/j.1467-9280.2006.01693.x
