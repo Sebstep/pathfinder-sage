@@ -2,11 +2,11 @@ import Chat from '../../components/chat'
 
 # Instruct the Model Throughout the Prompt
 
-Instructive language is the key to achieving clear, actionable, and useful outputs. Unlike descriptive language, which merely provides information, <mark>instructive language guides the model step-by-step</mark>, ensuring it understands not just what the task is, but how to approach it.
+Instructive language is the key to achieving clear, actionable, and useful outputs. Unlike descriptive language, which merely provides information, <mark>instructive language guides the model step-by-step</mark>, ensuring it understands not just what the task is, but how to approach it.[^Lin2024EffectivePrompts]
 
 ## The Importance of Instructive Prompts
 
-Generative AI models process instructions more effectively when they are framed as explicit actions. For example, instead of saying, "<span mark-color="red">This is an excerpt</span> discussing […]", an instructive prompt would say, "<span mark-color="green">Read the following excerpt</span> discussing…" This proactive phrasing eliminates ambiguity, directing the model to perform the task instead of simply recognizing the content.
+Generative AI models process instructions more effectively when they are framed as explicit actions. For example, instead of saying, "<span mark-color="red">This is an excerpt</span> discussing […]", an instructive prompt would say, "<span mark-color="green">Read the following excerpt</span> discussing…" This proactive phrasing eliminates ambiguity, directing the model to perform the task instead of simply recognizing the content.[^Liu2023PromptSurvey]
 
 Instructive language ensures the model delivers exactly what you need. By specifying the type of analysis or output you want, such as “Provide feedback on grammar, clarity, coherence, argument quality, and use of evidence, scoring each from 1-10,” you reduce the risk of irrelevant or incomplete responses.
 
@@ -43,3 +43,9 @@ Note the following points from the example above:
 - **Instruct throughout the entire prompt**, e.g., by writing `Read the following excerpt...` instead of `This is an excerpt...`
 - **Clearly specify the requirements**, e.g., by providing `...the following criteria: grammar, `
 - **Clearly specify the desired output format**, e.g., by asking the model to `Provide a score from 1-10 for each attribute, along with reasoning for your score.`
+
+## References & Footnotes
+
+[^Lin2024EffectivePrompts]: Lin, Z. (2024). **How to write effective prompts for large language models**. *Nature Human Behaviour*, *8*, 611–615. https://doi.org/10.1038/s41562-024-01847-2
+
+[^Liu2023PromptSurvey]: Liu, P., Yuan, W., Fu, J., Jiang, Z., Hayashi, H., & Neubig, G. (2023). **Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing**. *ACM Computing Surveys*, *55*(9), 1–35. https://doi.org/10.1145/3560815
